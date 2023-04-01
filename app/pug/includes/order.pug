@@ -1,0 +1,64 @@
+.order(data-aos="fade-up" style="background-image: url('images/dist/section-bg1.webp')")#order
+  .container
+    .order__wrap
+      .order__col
+        form(method="post").form
+          input(type='hidden' name='project_name' value='Netlivery')
+          input(type='hidden' name='admin_email' value='250296a@gmail.com')
+          input(type='hidden' name='form_subject' value='Netlivery')
+          .order__form 
+            h2.order__title.title Мы купим товары для Вас
+
+            .form-wrap
+              .form-wrap__input 
+                input(type="text" placeholder="ФИО" name="Имя")
+              .form-wrap__input.form-wrap__input--half 
+                input(type="text" placeholder="Телефон" name="Телефон")
+              .form-wrap__input.form-wrap__input--half 
+                input(type="text" placeholder="Email" name="Email")
+              .form-wrap__input 
+                input(type="text" placeholder="Ваш город" name="Город")
+              .form-wrap__input 
+                input(type="text" placeholder="Ваш адрес" name="Адрес")
+              .form-wrap__select 
+                input(type="text" name="Сайт" value="").input__selected
+                .icon
+                  svg
+                    use(xlink:href='sprite.svg#angle')
+                .form-wrap__selected(data-value="Выберите сайт с которого будет производится заказ") Выберите сайт с которого будет производится заказ
+                .form-wrap__dropdown 
+                  .form-wrap__option(data-value="Сайт 1") Сайт 1
+                  .form-wrap__option(data-value="Сайт 2") Сайт 2
+                  .form-wrap__option(data-value="Сайт 3") Сайт 3
+
+              .form-wrap__link 
+                input(type="text" placeholder="Введите ссылку на товар" name="Ссылка_на_товар").order-link-js
+                //- .icon
+                //-   svg
+                //-     use(xlink:href='sprite.svg#plus')
+              .form-wrap__checkbox 
+                input(type="checkbox")#agree
+                label(for="agree") <span>Я принимаю соглашение </span>
+                  a(href="#") договора оферты 
+
+              button(type="submit" disabled).btn Заказать  
+
+              p.agree Нажимая на кнопку ЗАКАЗАТЬ, вы соглашаетесь с 
+                a(href="#") политикой обработки  персональных данных и конфиденциальности
+      
+      .order__col
+        .order__img 
+          img( loading="lazy" src="images/dist/order.webp", alt="")
+
+        ul 
+          li
+            svg.icon
+              use(xlink:href='sprite.svg#check')
+            | Принимаем оплату картами российских банков и криптовалютой
+          li
+            img(loading="lazy" src="images/dist/pay-systems2.webp", alt="")
+          each item in['Берем на себя оформление заказа и общение с продавцом','Применим все скидки и купоны магазина, если они есть','Доставим даже из тех магазинов, которые не везут к нам']
+            li
+              svg.icon
+                use(xlink:href='sprite.svg#check')
+              =item  

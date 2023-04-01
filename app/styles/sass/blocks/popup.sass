@@ -1,0 +1,87 @@
+.popup
+  position: fixed
+  background-color: rgba($black, .6)
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  @include aic-jcc
+  transition: $transition
+  opacity: 0
+  pointer-events: none
+  z-index: 99
+  padding: rem(15)
+
+  .title
+    padding-right: rem(30)
+  
+  &.open
+    opacity: 1
+    pointer-events: inherit
+
+    .popup__window
+      transform: scale(1)
+      opacity: 1
+  
+  &__window
+    background-color: #F8F7FC
+    border-radius: rem(24)
+    overflow: hidden
+    padding: rem(40)
+    max-width: rem(690)
+    margin: auto
+    position: relative
+    transition: $transition
+    transition-delay: .4s
+    transform: scale(.7)
+    opacity: 0
+    
+    @include lg
+      border-radius: rem(12)  
+      padding: rem(15)
+
+
+  &__input
+    margin-bottom: rem(20)
+    border-radius: rem(12)
+    overflow: hidden
+    border: rem(1) solid #6E627A
+    height: rem(43)
+
+    input
+      background: $white
+      width: 100%
+      height: 100%
+      border: none
+      padding: 0 rem(15)
+
+
+  .btn
+    width: 100%    
+    margin-bottom: rem(25)
+
+  p
+    color: #6e627a
+    line-height: rem(23)
+    a
+      color: #6e627a
+      text-decoration: underline
+
+  &__close
+    position: absolute
+    top: rem(20)    
+    right: rem(20)
+    transform: rotate(45deg)
+    width: rem(25)
+    height: rem(25)
+    @include aic-jcc
+    cursor: pointer
+    z-index: 9
+    
+    @include xs
+      top: rem(15)
+      right: rem(15)
+
+    svg
+      width: 100%
+      height: 100%

@@ -1,0 +1,165 @@
+.footer
+	flex: 0 0 auto
+	
+	&__logo
+		max-width: rem(150)
+		width: 100%
+		height: rem(35)
+		
+		@include md
+			margin-right: 0
+		
+		@include sm
+			height: rem(30)
+		
+		svg
+			width: 100%
+			height: 100%
+		img
+			max-width: 100%
+
+	&__top
+		background-color: $accent
+		padding: rem(30) 0 rem(25)
+
+		*
+			color: $white
+		p
+			font-size: rem(12)
+			line-height: rem(15)
+
+	&__nav
+		@include jfcsb
+		
+		@include lg
+			flex-wrap: wrap
+
+		@include xs
+			justify-content: space-between	
+		
+		&-col
+			width: 20%
+			padding-right: rem(10)
+
+				
+			@include md
+				width: 25%
+
+			@include xs
+				width: calc( 50% - 5px )
+				padding-right: 0	
+				margin-bottom: rem(20)
+
+			&:first-child
+				@include xs
+					display: none		
+
+			&:last-child
+				margin-bottom: 0
+				@include md
+					margin-top: rem(10)
+					width: 100%
+							
+		
+		&-main-link
+			text-decoration: underline
+			font-size: rem(18)
+			font-weight: 500
+			margin-bottom: rem(15)
+			
+			@include sm
+				margin-bottom: rem(10)
+				font-size: rem(16)
+				line-height: rem(16)
+
+
+		ul
+			li
+				display: block
+				&:last-child
+					margin-bottom: 0
+				a
+					color: rgba(176, 178, 178, 1)
+					font-size: rem(14)
+					line-height: rem(28)
+					position: relative
+
+					&:after
+						position: absolute
+						content: ''
+						width: 0
+						height: rem(1)
+						background-color: $white	
+						transition: $transition 
+						bottom: 0
+						left: 0
+
+					&:hover
+						color: $white
+
+						&:after
+							width: 100%
+							
+						
+
+	&__control
+		@include aic-jfcsb
+		margin-top: rem(30)
+
+	.lang
+		span
+			color: #B0B2B2
+		
+		ul
+			bottom: 0
+			
+		
+		&.open
+			ul
+				opacity: 1
+				bottom: 100%
+
+	&__bottom
+		background-color: $white
+		padding: rem(10)
+		
+		p
+			text-align: center
+			font-size: rem(12)
+			line-height: rem(14)
+
+		&-wrap
+			@include aic-jfcsb	
+			
+			@include sm
+				flex-direction: column-reverse
+
+			ul
+				@include xs
+					margin-bottom: rem(10) 
+				li
+					display: inline-block
+					margin-right: rem(30)
+					font-size: rem(12)
+					color: #455A64
+					font-weight: 500
+					
+					@include md
+						margin-right: rem(10)
+
+					@include xs
+						display: block
+						text-align: center		
+						font-size: rem(14)
+
+					&:last-child
+						margin-right: 0
+					
+					a
+						color: #455A64
+						text-decoration: underline
+						font-size: rem(12)
+						font-weight: 500
+						
+						@include xs
+							font-size: rem(14)

@@ -1,0 +1,87 @@
+extends layouts/main
+block title
+  | Контакты
+block main
+  include includes/popup
+  .wrapper
+    .content
+        include includes/header
+
+        .section.contacts(data-aos="fade-up")
+          .container
+            .contacts__wrap 
+              .contacts__col
+                .contacts__block
+                  h2.title Контакты
+                  
+                  .contacts__block-wrap
+                    ul 
+                        li
+                          span Company Name: 
+                          |LLC «AIZEN»
+
+                        li 
+                          span Legal Address:
+                          | Bishkek, Kyrgyz <br> Republic st. Kyzyl-riyskaya 186 
+
+                        li 
+                          span Mailing Address: 
+                          | Bishkek, Kyrgyz <br> Republic st. Kyzyl-riyskaya 186  
+                  
+                    ul 
+                        li 
+                          span INN: 
+                          | 00508202210452
+                        li
+                          span Phone: 
+                          a(href="tel:+996505225777") +996 (505) 22-57-77  
+                        li
+                          span Email: 
+                          a(href="mailto:office@aizen.soft") office@aizen.soft
+
+                .contacts__block
+                  h2.title Банковские реквизиты
+                  .contacts__block-wrap
+                    div 
+                      img( loading="lazy" src="images/dist/contacts.webp", alt="")
+                    
+                    ul 
+                      li 
+                        span Bank: 
+                        |OJSC BAKAI BANK
+                      li 
+                        span SWIFT: 
+                        |BAKAKG22   
+                      li
+                        span Account number: 
+                        | 1240020000956060  
+
+              .contacts__col 
+                form(method="post").form
+                  .order__form
+                    h2.order__title.title Обратная связь
+                    .form-wrap
+                      .form-wrap__input.form-wrap__input--half
+                        input(type='text' placeholder='Ваше имя' name='Имя' required)
+                      .form-wrap__input.form-wrap__input--half
+                        input(type='text' placeholder='Компания' name='Название_компании' required)
+                      .form-wrap__input.form-wrap__input--half
+                        input(type='text' placeholder='Email' name='Email')
+                      .form-wrap__input.form-wrap__input--half
+                        input(type='text' placeholder='Телефон' name='Телефон' required)
+                      .form-wrap__textarea
+                        <textarea placeholder="Тема вопроса"></textarea>
+                     
+                      button.btn(type='submit') Отправить  
+                      
+
+
+  
+
+        include includes/seo
+        
+
+    include includes/footer
+
+
+  include includes/scripts 

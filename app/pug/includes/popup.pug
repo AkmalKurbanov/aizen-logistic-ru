@@ -1,0 +1,29 @@
+.popup#consultation 
+  .popup__window
+    .popup__close 
+      svg
+        use(xlink:href='sprite.svg#plus') 
+    h2.title Мы свяжемся с Вами в <br> ближайшее время! 
+    br
+    .popup__form
+      form(method="post")
+        input(type='hidden' name='project_name' value='Netlivery')
+        input(type='hidden' name='admin_email' value='250296a@gmail.com')
+        input(type='hidden' name='form_subject' value='Netlivery') 
+        .form-wrap
+          .form-wrap__input
+            input(type="text" name="Имя" placeholder="ФИО" required)
+          .form-wrap__input
+            input(type="text" name="Телефон" placeholder="Телефон" required)
+        button(type="submit").btn Получить консультацию
+
+    p Нажимая на кнопку ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ, вы соглашаетесь с 
+      a(href="#") политикой обработки персональных данных и конфиденциальности    
+
+.popup#done 
+  .popup__window.tac
+    .popup__close 
+      svg
+        use(xlink:href='sprite.svg#plus') 
+    h2.title Спасибо, <br> Ваша заявка принята!
+    h3 Мы свяжемся с вами в ближайшее время 

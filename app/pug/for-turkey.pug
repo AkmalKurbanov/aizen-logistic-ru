@@ -1,0 +1,148 @@
+extends layouts/main
+block title
+  | Товары из Турции
+block main
+  include includes/popup
+  .wrapper
+    .content
+        include includes/header
+        .hero.hero--bg.hero--country 
+          .container
+            .hero__wrap 
+              .hero__col
+                h2 Доставка товаров под ключ
+                br
+                h2.hero__title.title Найдем поставщика в Турции
+                .hero__btn-wrap 
+                  a(href="#").btn.consultation-js Получить консультацию 
+             
+              .hero__col 
+                .hero__img 
+                  img( loading="lazy" src="images/dist/hero7.webp", alt="") 
+
+              .hero__bg-map 
+                img(loading="lazy" src="images/dist/map.webp", alt="")
+        
+        .gradient-section.gradient-section--products(data-aos="fade-up" style="background-image: url('images/dist/section-bg1.webp')")
+          .container 
+            .gradient-section__wrap 
+              .gradient-section__col
+                h2.title.title--light Покупать вместе с Айзен Логистика - выгодно!
+                .gradient-section__subtitle Стоимость товаров в США на порядок ниже, чем в России.
+                p Закупка товаров в итернет-магазинах производятся в долларах. Актуальный курс уточняйте у менеджера на момент в покупки 
+
+              .gradient-section__col 
+                .gradient-section__item-wrap.products-js
+                  mixin item(img, name, price1,price2) 
+                    .gradient-section__item 
+                      .gradient-section__item-img
+                        img( loading="lazy" src="images/dist/product"+img+".webp", alt="")
+                      .gradient-section__item-name=name
+                      if price1
+                        .gradient-section__item-price=price1
+                      else  
+                      .gradient-section__item-price.gradient-section__item-price--modify=price2
+                  +item('5', 'Louis Vuitton', '','Оптом: от 50$')
+                  +item('6','Adidas','','Оптом: от 20$')
+                  +item('7','Nike Air Force','','Оптом: от 10$')
+                  +item('5', 'Louis Vuitton', '','Оптом: от 50$')
+                  +item('6','Adidas','','Оптом: от 20$')
+                  +item('7','Nike Air Force','','Оптом: от 10$')
+        
+        .section.advantages(data-aos="fade-up") 
+          .container 
+            h2.title.tac Наши преимущества
+            .advantages__wrap 
+              each item,index in advantages
+                .advantages__item 
+                  div
+                    .advantages__item-icon 
+                      svg
+                        use(xlink:href='sprite.svg#advantages'+(index+1))
+                  div
+                    .advantages__item-title=item.title
+                    .advantages__item-desc=item.desc 
+        
+        .gradient-section(data-aos="fade-up" style="background-image: url('images/dist/section-bg3.webp')")
+          .container 
+            .gradient-section__wrap 
+              .gradient-section__col
+                h2.title.title--light Товары и услуги
+                .gradient-section__count-wrapper
+                  .gradient-section__count-wrap.gradient-section__count-wrap--single
+                    h3 Товары
+                    each item in['Товары народного потребления <br> (одежда, обувь, текстиль, быт)','Бытовая техника','Печатное оборудование','Оборудование (для производства <br> продуктов питания)','Производство мебели и деревообработка','Материалы и компоненты для производства <br> товаров гражданского назначения']
+                      .gradient-section__count-item
+                        .gradient-section__count-item-count
+                        .gradient-section__count-item-title!=item
+
+                  .gradient-section__count-wrap.gradient-section__count-wrap--single
+                    h3 Услуги
+                    each item in['Логистика (международные <br> грузоперевозки);','Консалтинг в области ВЭД;','Сертификация']
+                      .gradient-section__count-item
+                        .gradient-section__count-item-count
+                        .gradient-section__count-item-title!=item
+
+              .gradient-section__col
+                .gradient-section__img.gradient-section__img--bg 
+                  img( loading="lazy" src="images/dist/flat3.webp", alt="")
+        
+        include includes/steps2    
+
+        .gradient-section(data-aos="fade-up" style="background-image: url('images/dist/section-bg3.webp')")
+          .container 
+            .gradient-section__wrap 
+              .gradient-section__col
+                h2.title.title--light О компании
+                p Поставки товаров под ключ, это сервис включающий в себя транспортно-экспедиторские а так же консалтинговые услуги. Вам не потребуется расширять свой штат сотрудников для организации поставки своими силами, заниматься оформлением разрешительной документации, контролировать каждый этап поставки.
+                br
+                p Поиск производителей, согласования сделок, организация логических процессов - все это мы возьмём на себя. 
+
+                
+
+              .gradient-section__col 
+                .gradient-section__img.gradient-section__img--bg
+                  img( loading="lazy" src="images/dist/flat1.webp", alt="")
+        
+        .packaging.section(data-aos="fade-up")
+          .container
+            h2.title Стоимость отправки грузов 
+            .packaging__delivery
+              .packaging__delivery-kind
+                .packaging__delivery-kind-top
+                  .packaging__delivery-kind-title Авто тариф
+                  .packaging__delivery-kind-price
+                    | от $4 за кг
+                p Забор заказа на рынке “Садовод” в Москве  
+                .packaging__delivery-kind-bottom
+                  .packaging__delivery-kind-desc
+                    ul
+                      li Вес одного мешка с товарами - 60 кг максимум.
+                      li +$5 за каждый мешок
+                  .packaging__delivery-kind-icon
+                    img( loading="lazy" src="images/dist/shipping.webp", alt="")
+                      
+              .packaging__delivery-kind
+                .packaging__delivery-kind-top
+                  .packaging__delivery-kind-title Авиа тариф
+                  .packaging__delivery-kind-price
+                    | от $8 за кг
+                p Забор заказа на рынке “Садовод” в Москве
+                .packaging__delivery-kind-bottom
+                  .packaging__delivery-kind-desc
+                    
+                    ul
+                      li Вес одного мешка с товарами - 60 кг максимум..
+                      li +$5 за каждый мешок
+                  .packaging__delivery-kind-icon
+                    img( loading="lazy" src="images/dist/avia.webp", alt="")
+
+        include includes/faq
+        include includes/order3
+        include includes/seo
+        
+
+    include includes/footer
+
+
+  include includes/scripts 

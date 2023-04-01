@@ -1,0 +1,228 @@
+.help
+  &__title
+    font-size: rem(30)
+    line-height: rem(40)
+    font-weight: 500
+    text-align: center
+    
+    @include lg
+      font-size: rem(20)
+      line-height: rem(20)
+
+    @include sm
+      font-size: rem(16)
+      line-height: rem(16)
+
+    @include xs
+      font-size: rem(14)
+      line-height: rem(14)
+
+  &__wrap
+    @include jfcsb
+    position: relative
+    img
+      width: 100%
+    &.fade-in
+      .help__col
+        opacity: 1
+        transform: scale(1)
+
+        &:nth-child(2)
+          .help__img-mark
+            transform: translate(-50%,-150%) scale(1)
+            opacity: 1
+
+        &:nth-child(3)
+          .help__img-mark
+            transform: translateY(-50%) scale(1)
+            opacity: 1
+
+      .help__arrow
+        opacity: 1
+        transform: scale(1) translate(-50%,-50%)
+
+      .help__slide
+        animation: move 6s alternate ease-in-out
+        opacity: 1
+
+        
+
+
+  &__col
+    width: 33.33%
+    transition: $transition
+    transform: scale(.7)
+    opacity: 0
+    
+    &:first-child
+      z-index: 2
+      display: flex
+      flex-direction: column-reverse
+
+      @include xs
+        flex-direction: column
+
+    &:nth-child(2)      
+      transition-delay: .3s
+      
+      .help__img-mark
+        top: 50%
+        left: 50%
+        transition-delay: 2.5s
+        
+
+    &:nth-child(3)      
+      display: flex
+      flex-direction: column-reverse
+      transition-delay: .5s
+
+      @include xs
+        flex-direction: column
+
+
+      .help__img-mark
+        top: 40%
+        left: 30%
+        transform: translateY(-50%) scale(0)
+        transition-delay: 5.5s
+
+    &--modify
+      position: absolute
+      display: flex
+      flex-direction: column
+      align-items: center
+      top: 0
+      
+      .help__img
+        width: rem(60)
+
+  
+  &__img
+    position: relative
+    svg
+      width: 100%
+      height: rem(280)
+      
+      @include md
+        height: rem(170)
+
+      @include sm
+        height: rem(150)
+
+      @include xs
+        height: rem(85)
+    img
+      width: 100%  
+
+    &-mark
+      max-width: rem(60)
+      width: 100%
+      @include aic-jcc  
+      position: absolute
+      transition: $transition
+      opacity: 0
+      
+      @include lg
+        max-width: rem(40)
+
+      @include xs
+        max-width: rem(30)
+
+      
+      img
+        width: 100% 
+
+  &__arrow
+    position: absolute      
+    width: rem(700)
+    height: 100%
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    @include aic-jcc
+    opacity: 0
+    transition: $transition
+    transition-delay: 1s 
+    
+    @include lg
+      width: rem(500)
+
+    @include md
+      width: rem(400)
+
+    @include sm
+      width: rem(300)
+
+    @include xs
+      display: none
+
+   
+
+    svg
+      width: 100%
+      height: 100%
+      
+
+  &__slide-wrap
+    position: relative
+    width: 100%
+
+    @include xs
+      display: none
+  
+  &__slide
+    position: absolute
+    offset-path: path('M1 112.89C26.6746 70.7383 115.139 0.259555 263.6 55.5583C449.176 124.682 480.704 108.417 524.204 86.4605C559.005 68.895 566.906 41.4625 566.507 29.9419C565.709 23.4362 558.446 8.717 535.778 1.88599C513.109 -4.94503 512.231 29.3998 514.626 47.4261C517.819 63.1483 537.693 91.9903 591.65 81.5812C645.607 71.172 687.032 49.5947 701 40.1071')
+    top: 0
+    left: 0
+    max-width: rem(150)
+    width: 100%
+
+    @include lg
+      offset-path: path('M1 80.9214C19.339 50.8131 82.5279 0.47111 188.571 39.9702C321.125 89.344 343.645 77.7266 374.717 62.0432C399.575 49.4964 405.219 29.9018 404.934 21.6728C404.364 17.0259 399.176 6.51215 382.984 1.63285C366.792 -3.24645 366.165 21.2856 367.876 34.1615C370.156 45.3916 384.352 65.9931 422.893 58.558C461.433 51.1229 491.023 35.7105 501 28.9337')
+      max-width: rem(70)
+
+    @include md
+      offset-path: path('M1 64.9371C15.6712 40.8505 66.2223 0.576888 151.057 32.1761C257.1 71.6752 275.116 62.3813 299.974 49.8346C319.86 39.7971 324.375 24.1214 324.147 17.5383C323.691 13.8207 319.54 5.40972 306.587 1.50628C293.634 -2.39716 293.132 17.2285 294.501 27.5292C296.325 36.5133 307.682 52.9945 338.514 47.0464C369.347 41.0983 393.018 28.7684 401 23.3469')
+      
+    @include sm
+      offset-path: path('M1 48.9529C12.0034 30.8878 49.9168 0.682666 113.543 24.3821C193.075 54.0064 206.587 47.036 225.23 37.6259C240.145 30.0979 243.531 18.3411 243.36 13.4037C243.018 10.6155 239.905 4.30729 230.19 1.37971C220.475 -1.54787 220.099 13.1713 221.125 20.8969C222.494 27.635 231.011 39.9959 254.136 35.5348C277.26 31.0737 295.014 21.8263 301 17.7602')
+
+    @include xs
+      display: none  
+    
+    img
+      max-width: 100%
+  @keyframes move
+    0%
+      offset-distance: 0%
+    100%
+      offset-distance: 100%
+    
+      
+  &--delivery
+    .help__col  
+      &:nth-child(2)
+        .help__img-mark      
+          transform: translate(-50%,-90%) scale(0)
+
+  &--swift
+    .help__col
+      &:first-child
+        .help__img
+          @include aic-jcc
+          img
+            width: rem(60)
+            @include lg
+              width: rem(40)
+            
+
+      &:nth-child(2)
+        z-index: 2
+        
+    .help__img
+      height: 100%
+    .help__img-mark  
+      transform: translate(-50%,-50%)
+      

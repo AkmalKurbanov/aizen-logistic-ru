@@ -1,0 +1,352 @@
+.shops
+
+  &__title
+    font-size: rem(30)
+    line-height: rem(40)
+    font-weight: 600
+    margin-bottom: rem(30)
+
+    @include lg
+      font-size: rem(25)
+      line-height: rem(35)
+      margin-bottom: rem(25)
+
+    @include md
+      font-size: rem(20)
+      line-height: rem(30)
+      margin-bottom: rem(20)
+
+  &__wrap
+    @include fww-jfcsb
+
+    @include sm
+      flex-direction: column
+
+  &__col
+    width: calc( 50% - 85px )
+    text-align: center
+    margin-top: rem(60)
+
+    @include lg
+      width: calc( 50% - 40px )
+      margin-top: rem(50)
+
+    @include md
+      width: calc( 50% - 10px )
+      margin-top: rem(40)
+
+    @include sm
+      width: 100%
+
+    .btn
+      margin-top: rem(30)
+
+  &__items-wap
+    display: flex
+    align-items: flex-start
+    justify-content: space-around
+
+    @include xs
+      flex-wrap: wrap
+
+    &--single-line
+      flex-wrap: wrap
+
+      .shops__item-wrap
+        margin-right: rem(20)
+        margin-bottom: rem(10)
+
+        @include xs
+          margin-right: 0
+          width: calc( 33.33% - 10px )
+
+        &:last-child
+          margin-right: 0
+
+  &__item-wrap
+    
+    &:hover
+      .shops__item
+        box-shadow: 0px 10px 15px rgba($accent, 0.9)
+        transform: translateY(-5px)
+
+      .shops__item--soon
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15)
+        
+        &:before
+          opacity: 1  
+
+        .shops__item-soon
+          opacity: 1   
+
+      .shops__name
+        color: $accent  
+    
+    @include xs
+      width: calc( 25% - 10px )
+      margin-bottom: rem(10)
+
+  &__item
+    @include aic-jcc
+    width: rem(100)
+    height: rem(100)
+    border-radius: 100%
+    overflow: hidden
+    background: $white
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15)
+    margin: auto
+    transition: $transition
+    cursor: pointer
+    position: relative
+
+    img
+      width: 100%
+      max-width: 100%
+
+    @include lg
+      width: rem(90)
+      height: rem(90)
+
+    @include md
+      width: rem(70)
+      height: rem(70)
+
+    @include sm
+      width: rem(70)
+      height: rem(70)
+
+    @include xs
+      width: rem(60)
+      height: rem(60)
+
+    svg
+      width: 100%
+      height: 100%
+    
+    &-soon
+      position: absolute
+      color: $white
+      font-size: rem(22)
+      font-weight: 600
+      text-transform: uppercase
+      opacity: 0
+
+      @include lg
+        font-size: rem(20)
+      
+      @include md
+        font-size: rem(13)
+
+
+    &--soon
+      &:before
+        position: absolute
+        content: ''
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0 
+        background-color: rgba($black, .7) 
+        backdrop-filter: blur(3px)
+        opacity: 0
+        transition: $transition
+
+     
+
+
+     
+
+  &__name
+    font-size: rem(22)
+    font-weight: 600
+    line-height: rem(22)
+    color: $black
+    margin-top: rem(30)
+
+    @include lg
+      font-size: rem(20)
+      margin-top: rem(25)
+
+    @include md
+      font-size: rem(16)
+      margin-top: rem(18)
+
+    @include sm
+      font-size: rem(15)
+      margin-top: rem(17)
+
+    @include xs
+      font-size: rem(14)
+      margin-top: rem(10)
+
+  &--search
+
+    .shops__col-wrap
+      // @include jfcsb
+      @include aic-jcc
+      background-color: #F8F7FC
+      position: relative
+
+      .shops__col
+        margin: 0
+        width: auto
+        display: inline-block
+        padding: rem(25) 0
+
+        @include md
+          padding: 0
+
+        // &:first-child
+          
+        //   @include md
+        //     opacity: 0
+        //     position: fixed
+        //     left: -100%
+        //     top: 0
+        //     transition:$transition 
+        //     z-index: 2
+        //     overflow-y: scroll
+        //     height: 100%
+
+            
+            
+
+          &.open
+            opacity: 1
+            left: 0
+            
+            
+
+        &:last-child
+          width: calc( 100% - 345px )
+          padding: rem(0) rem(65)
+          
+          @include lg
+            padding: rem(0) rem(30)
+
+          @include md
+            width: 100%
+            padding: rem(0) rem(15)
+
+            
+
+
+    .shops__brand-list
+      background: $white
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15)
+      border-radius: 0px 24px 24px 0px
+      overflow: hidden
+      max-width: rem(345)
+      min-width: rem(345)
+      width: 100%      
+
+      @include md
+        border-radius: 0
+
+      @include xs
+        max-width: rem(270)
+        min-width: rem(270)
+                
+      
+
+      
+
+      ul
+        li
+          display: block
+          
+          &.active
+            a
+              background-color: $accent
+              color: $white
+          a
+            transition: $transition
+            padding: rem(20)
+            display: block
+            color: $black
+            text-align: left
+            
+            @include xs
+              padding: rem(15)
+              font-size: rem(14)
+
+            &:hover
+              background-color: $accent
+              color: $white
+
+    .shops__list
+      @include fww
+      display: none
+
+      &:first-child
+        display: flex  
+
+      .shops__list-item
+        max-width: 16.66%
+        width: 100%
+        margin-bottom: rem(85)
+        padding: 0 rem(5)
+        @include jcc
+        
+        @media (max-width: 1599px)
+          max-width: 20%
+          margin-bottom: rem(50)
+
+        @include lg
+          max-width: 25%
+          margin-bottom: rem(40)
+
+        @include md
+          max-width: 20%
+          margin-bottom: rem(30)
+
+        @include sm
+          max-width: 33.33%
+
+        @include xs
+          max-width: 50%
+        
+
+
+    .shops__tabs
+      padding: rem(5)
+      
+      a
+        @include aic-jcc
+        background-color: $white
+        border-radius: rem(12)
+        overflow: hidden
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15)
+        padding: rem(15) rem(25)
+        transition: $transition
+
+        &:hover
+          transform: translateY(-5px)
+        
+        @media (max-width: 1599px)
+          padding: rem(10) rem(20)
+          font-size: rem(12)
+          border-radius: rem(6)
+
+
+        img
+          max-width: rem(40)
+          @media (max-width: 1599px)
+            max-width: rem(30)
+
+        
+        span
+          margin-left: rem(10)
+          font-weight: 500
+          color: $black
+
+      .slick-list
+        padding: rem(25) 0
+
+        @include md
+          padding: rem(35) 0 rem(25)
+      
+      .slick-slide
+        padding: 0 rem(15)
+        @media (max-width: 1599px)
+          padding: 0 rem(5)

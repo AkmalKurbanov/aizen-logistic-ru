@@ -1,0 +1,353 @@
+// .gradient-section
+//   position: relative
+//   padding: rem(60) 0
+//   background-position: center
+//   background-repeat: no-repeat
+//   background-size: cover
+
+//   @include sm
+//     padding: rem(50) 0
+
+//   @include xs
+//     padding: rem(40) 0
+
+//   &:before
+//     position: absolute
+//     content: ''
+//     width: 100%
+//     height: 100%
+//     background: linear-gradient(90deg, #5740A0 14.12%, rgba(87, 64, 160, 0.2) 100%) 
+//     top: 0
+//     right: 0
+//     bottom: 0
+//     left: 0
+    
+//   p,li,a
+//     color: $white
+//     font-size: rem(20)
+//     font-weight: 400
+//     line-height: rem(28)
+    
+//     @include lg
+//       font-size: rem(19)
+//       line-height: rem(26)
+    
+//     @include md
+//       font-size: rem(18)
+//       line-height: rem(25)
+    
+//     @include sm
+//       font-size: rem(17)
+//       line-height: rem(22)
+    
+//     @include xs
+//       font-size: rem(16)
+
+
+//   h3
+//     font-style: italic
+//     color: $white
+//     font-weight: 600
+//     font-size: rem(30)
+
+
+//   &__subtitle
+//     color: $white
+//     font-size: rem(26)
+//     font-weight: 500
+//     line-height: rem(35)
+//     margin-bottom: rem(40)
+    
+//     @include lg
+//       font-size: rem(24)
+//       line-height: rem(33)
+//       margin-bottom: rem(35)
+    
+//     @include md
+//       font-size: rem(22)
+//       line-height: rem(30)
+    
+//     @include sm
+//       font-size: rem(20)
+//       line-height: rem(28)
+
+
+//   &__wrap
+//     @include aic-jfcsb
+
+//     @include sm
+//       flex-direction: column-reverse
+
+    
+//   &__col
+//     &:first-child
+//       max-width: rem(730)
+//       width: 100% 
+//       margin-right: rem(65)
+      
+//       @include sm
+//         margin-right: 0
+
+//   &__item-wrap
+//     @include aife
+//     max-width: rem(800)
+//     min-width: rem(800)
+//     width: 100%
+    
+//     @media (max-width: 1599px)
+//       max-width: rem(700)
+//       min-width: rem(700)
+
+//     @include lg
+//       margin-top: rem(20)
+//       max-width: 100%
+//       min-width: 100%
+
+    
+//     @include md
+//       justify-content: space-between
+//       width: 100%
+    
+//     .slick-track
+//       display: flex
+//       align-items: stretch
+      
+//       .slick-slide
+//         min-height: 100%
+//         height: auto
+//         @include aife
+//         justify-content: center
+//         padding: 0 rem(15)
+
+//         @media (max-width: 1599px)
+//           padding: 0 rem(10)
+
+
+//   &__item
+//     text-align: center
+      
+  
+//   &__item-img
+//     @include aic-jcc
+
+//     img
+//       max-width: 100%
+      
+
+//   &__item-name
+//     color: $white
+//     font-size: rem(25)
+//     font-weight: 600
+    
+//     @media (max-width: 1599px)
+//       font-size: rem(20)
+
+//     @include sm  
+//       font-size: rem(16)
+
+//   &__item-price
+//     color: $white
+//     font-size: rem(18)
+//     font-weight: 500
+
+//     @media (max-width: 1599px)
+//       font-size: rem(16)
+    
+//     @include sm  
+//       font-size: rem(14)
+
+//     &--modify
+//       background: #029835
+//       border-radius: rem(15)
+//       padding: 0 rem(15)
+//       box-sizing: border-box
+
+//     @include sm  
+//       padding: 0 rem(5)
+//       border-radius: rem(10)
+//       font-size: rem(12)
+
+//   &__delivery-brands
+//     @include aic
+//     margin-top: rem(50)
+    
+//     @include xs
+//       margin-top: rem(20)
+
+//   &__delivery-item
+//     margin-right: rem(40)
+    
+//     @media (max-width: 1599px)
+//       margin-right: rem(20)
+
+
+//     svg
+//       fill: #fff
+//       height: rem(63)
+//       width: auto
+      
+//       @media (max-width: 1599px)
+//         height: rem(40)
+//         width: rem(100)
+
+//       @include xs
+//         height: rem(30)
+//         width: rem(60)
+
+//     &:last-child
+//       margin-right: 0
+    
+
+      
+//   &__img
+//     min-width: rem(400)
+//     max-width: rem(400)
+//     height: rem(360)
+//     width: 100%    
+//     @include aic-jcc
+//     position: relative
+
+//     @include lg
+//       min-width: rem(350)
+//       max-width: rem(350)
+//       height: rem(310)
+
+//     @include md
+//       min-width: rem(300)
+//       max-width: rem(300)
+//       height: rem(260)
+
+//     @include sm
+//       min-width: rem(250)
+//       max-width: rem(250)
+//       height: rem(210)
+//       margin-bottom: rem(30)
+
+
+//     .icon
+//       width: 100%
+//       height: 100%
+//     img
+//       max-width: 100%  
+
+//     &--bg
+//       &::after
+//         position: absolute
+//         content: ''
+//         width: 100%
+//         height: 100%
+//         border-radius: 100%
+//         background: radial-gradient(57.69% 57.69% at 50% 42.31%, rgba(255, 255, 255, 0.576) 0%, rgba(255, 255, 255, 0) 100%)
+//         backdrop-filter: blur(11.5px)
+//       svg,img
+//         position: relative
+//         z-index: 1
+
+
+
+//   &__count-wrapper
+//     @include jfcsb
+//     @include xs
+//       flex-direction: column
+
+//   &__count-wrap
+//     column-count: 2
+//     counter-reset: section
+//     column-gap: rem(60)
+
+//     @include xs
+//       column-count: 1
+//       column-gap: 0
+
+//     &--single
+//       column-count: 1
+//       column-gap: normal
+      
+//       .gradient-section__count-item
+//         min-height: auto
+//         margin-top: rem(25)
+//         margin-bottom: 0
+//         @include aic
+
+//       .gradient-section__count-item-title
+//         margin: 0  
+//         font-size: rem(18)
+//         font-weight: 400
+//         line-height: rem(22)
+        
+//         @include lg
+//           font-size: rem(16)
+//           line-height: rem(20)
+//           margin-bottom: rem(10)
+
+//   &__count-item
+//     @include aifs
+//     break-inside: avoid
+//     margin-bottom: rem(50)
+//     min-height: rem(110)    
+      
+
+//     &-title
+//       color: $white
+//       font-size: rem(20)
+//       font-weight: 600
+//       line-height: rem(22)
+//       margin-bottom: rem(15)
+      
+      
+
+//     &-desc
+//       color: $white
+//       font-size: rem(18)
+//       font-weight: 400
+//       line-height: rem(22)
+
+  
+//   &__count-item-count
+//     min-width: rem(50)
+//     max-width: rem(50)
+//     height: rem(50)
+//     border-radius: 100%
+//     @include aic-jcc
+//     position: relative
+//     background-color:  $white 
+//     margin-right: rem(20)
+
+//     @include lg
+//       min-width: rem(40)
+//       max-width: rem(40)
+//       height: rem(40)
+//       margin-right: rem(10)
+
+//     @include md
+//       min-width: rem(30)
+//       max-width: rem(30)
+//       height: rem(30)
+      
+
+//     &:before
+//       position: absolute
+//       color: $accent
+//       font-size: rem(30)
+//       counter-increment: section
+//       content: "" counter(section) ""  
+
+//       @include lg
+//         font-size: rem(20)
+
+//       @include md
+//         font-size: rem(18)
+
+
+//   &--products
+//     .gradient-section__wrap
+//       @include lg
+//         flex-direction: column
+
+//       .gradient-section__col
+//         margin: 0
+//         max-width: 100%
+
+//         &:first-child
+//           @include md
+//             margin-right: 0

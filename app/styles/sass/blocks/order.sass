@@ -1,0 +1,421 @@
+.order
+  padding: rem(30) 0
+  position: relative
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover 
+  overflow: hidden
+
+  &__title
+    font-size: rem(40)
+    line-height: rem(40)
+    font-weight: 400
+    margin-bottom: rem(40)
+    
+    @include lg
+      font-size: rem(30)
+      line-height: rem(30)
+      margin-bottom: rem(30)
+    
+    @include sm
+      font-size: rem(25)
+      line-height: rem(25)
+      margin-bottom: rem(25)
+
+
+  &:before
+    position: absolute
+    content: ''
+    width: 100%
+    height: 100%
+    background: linear-gradient(0deg, #5740A0 27.05%, rgba(87, 64, 160, 0.2) 147.05%)
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+
+  &__wrap
+    @include jfcsb
+    position: relative
+    
+    @include sm
+      flex-direction: column-reverse
+
+    &--form
+      .order__col
+        width: 50%!important
+        @include sm
+          width: 100%!important
+          margin: 0!important
+
+  &__col
+    
+    
+    &:first-child
+      width: calc( 40% - 55px )   
+
+      @include lg  
+        width: 40%
+
+      @include sm
+        width: 100%  
+
+      ul
+        display: none
+        @include sm
+          display: block
+
+      p
+        @include sm
+          display: none    
+
+
+    &:last-child
+      width: 54%
+      
+      @include lg  
+        width: 50% 
+
+      @include sm
+        width: 100%  
+        margin-bottom: rem(110)
+
+      @include xs
+        margin-bottom: rem(150)
+
+      ul
+        @include sm
+          display: none  
+
+    &--iherb-col
+      padding-top: rem(50)
+
+  &__form
+    background-color: $white
+    padding: rem(40)
+    border-radius: rem(24)
+    background-color: #F8F7FC
+    
+    @include lg
+      padding: rem(20)
+      border-radius: rem(12)
+
+    @include md
+      padding: rem(15)
+
+  p 
+    color: rgba(110, 98, 122, 1)
+    margin-top: rem(30)  
+    a
+      text-decoration: underline
+
+  &__img
+    margin-bottom: rem(40)
+    @include aic-jcc
+
+    @include sm
+      margin-bottom: 0
+    
+    img
+      width: 100%
+    
+    &--hide
+      @include sm
+        display: none
+
+    &--desktop
+      display: none    
+      max-width: rem(570) 
+      width: 100%
+      margin: auto
+
+    &--mobile
+      margin: auto
+      position: relative
+
+      @include lg
+        max-width: rem(300)
+      
+      @include md  
+        max-width: rem(250)
+
+      @include sm
+        max-width: rem(250)
+        width: 100%   
+  ul
+    li
+      color: $white
+      font-weight: 600
+      position: relative
+      padding-left: rem(35)
+      margin-bottom: rem(16)
+      @include xs
+        font-size: rem(12)
+        line-height: rem(17)
+        padding-left: rem(25)
+
+      &:last-child
+        margin-bottom: 0
+      
+      .icon
+        margin-right: rem(20)
+        width: rem(23)
+        height: rem(23)
+        left: 0
+        top: 0
+        position: absolute
+        
+        @include xs
+          width: rem(17)
+          height: rem(17)
+
+
+
+  &__switch
+    width: rem(60)
+    height: rem(25)
+    border-radius: rem(18)
+    background: #B0B2B2
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15)
+    position: relative
+    cursor: pointer
+    margin: 0 rem(30)
+
+    &-label
+      color: $white
+      font-weight: 500
+      font-size: rem(20)  
+      cursor: pointer
+
+    &-slider
+      width: rem(25)
+      height: rem(25)
+      border-radius: 100%
+      background-color: $white
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15)
+      position: absolute
+      transition: $transition
+      left: 0
+
+
+  &__switch-wrap
+    @include aic-jcc
+    
+    @include sm
+      display: none
+
+    &.desktop
+      
+      .order__switch 
+        background: #458500
+
+      .order__switch-slider
+        left: calc( 100% - 26px )
+
+      &~.order__img--mobile
+        display: none 
+        
+      &~.order__img--desktop
+        display: flex
+
+
+
+  &__bot
+    @include aic-fdc
+
+    h2
+      font-size: rem(26)
+      line-height: rem(37)
+      font-weight: 600
+      color: $black
+
+      @include md
+        font-size: rem(20)
+        line-height: normal
+
+
+    span
+      margin-bottom: rem(30)
+      display: block
+      font-size: rem(15)
+      color: $textcolor
+
+      @include lg
+        margin-bottom: rem(10)
+
+      @include xs
+        margin-bottom: rem(20)
+        font-size: rem(12)
+      
+
+    .btn
+      width: calc( 100% - 40px )
+
+  p
+    color: $white
+    font-size: rem(22)
+    font-weight: 500  
+    
+    @include lg
+      font-size: rem(20)
+    
+    @include md
+      font-size: rem(18)
+
+    @include sm
+      font-size: rem(16)
+
+    @include xs
+      font-size: rem(14)
+
+
+  .subtitle
+    color: $white
+    display: none
+    
+    @include sm
+      display: block
+
+    @include xs
+      font-weight: 500
+      font-size: rem(14)
+      line-height: rem(20)
+
+  &__logo
+    width: rem(120)
+    height: rem(120)
+    border-radius: 100%
+    @include aic-jcc
+    box-shadow: 0px 8px 16px rgba(87, 64, 160, 0.15)
+    margin-bottom: rem(20)
+
+    @include lg
+      width: rem(100)
+      height: rem(100)
+      margin-bottom: rem(10)
+
+    @include md
+      width: rem(50)
+      height: rem(50)
+      margin-bottom: rem(5)
+
+    @include sm
+      width: rem(120)
+      height: rem(120)
+      margin-bottom: rem(20)
+
+    @include xs
+      width: rem(60)
+      height: rem(60)
+      margin-bottom: rem(15)
+
+
+    svg
+      width: rem(50)
+      
+      @include md
+        width: rem(25)
+      
+      @include sm  
+        width: rem(60)
+
+      @include xs  
+        width: rem(30)
+
+
+      
+
+  &__arrow
+    position: absolute
+    top: 20% 
+    left: 50%
+    transform: translateX(-50%)      
+    width: 100%
+
+    svg
+      width: 100%
+
+    &.desk
+      max-width: calc( 40% - 55px )   
+      
+      @include lg
+        top: 10% 
+        transform: translateX(-40%)      
+
+      @include md
+        top: 5% 
+        transform: translateX(-40%)      
+      
+      @include sm
+        display: none      
+
+
+    &.mobile
+      display: none
+      max-width: rem(110)
+      width: 100%
+
+      @include sm
+        display: block
+        top: 12%
+        transform: translateX(-100%)          
+
+      @include xs
+        top: 9%
+        transform: translateX(-93%)    
+
+  .desk--iherb
+    max-width: 60%            
+    top: 3%
+    right: 10%
+    transform: none 
+    left: auto
+    display: none
+
+    @include lg
+      top: 0%
+      right: 5%           
+    @include md
+      top: -3%
+
+  .mobile--iherb
+
+    @media (min-width: 767px)
+      max-width: 60%
+      right: 9%
+      left: auto
+      transform: none
+      top: 25%
+    
+    @include lg
+      right: 8%
+      top: 20%
+      max-width: 55%
+
+    @include md
+      right: 5%
+      top: 13%
+      max-width: 60%
+
+    // svg
+    //   &:last-child
+    //     display: none
+    //     @include sm
+    //       display: block
+    @include sm
+      right: auto
+      left: calc( 100% - 75px )
+      transform: none
+      top: calc( 100% - 80px )
+
+  .agree
+    color: rgba(110, 98, 122, 1)
+    line-height: rem(23)
+    font-size: rem(16)
+    font-weight: 400
+    a
+      color: rgba(110, 98, 122, 1)
+      text-decoration: underline
+      transition: $transition
+      &:hover
+        color: $accent

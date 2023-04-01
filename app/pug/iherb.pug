@@ -1,0 +1,110 @@
+extends layouts/main
+block title
+  | Iherb
+block main
+  include includes/popup
+  .wrapper
+    .content
+        include includes/header
+        .hero
+          .container
+            .hero__wrap 
+              .hero__col
+                h2.hero__title.title Закажите товары с iHerb.com с нашей помощью
+                p Товары с Айхерб напрямую без посредников Поможем с оплатой и оформлением товаров
+                br
+                p Оплачивайте российскими картами и криптовалютой!
+                .hero__pay-systems
+                  img(loading="lazy" src="images/dist/pay-systems1.webp", alt="")
+                
+                .hero__bg-desc.hero__bg-desc--light
+                  p 
+                    b Товары мировых брендов по-прежнему доступны для вас
+                  p Проблемы с оплатой российскими картами за рубежом? Воспользуйтесь нашей новой услугой 
+                    a(href="#") выкуп товаров
+                    |  в любом интернет-магазине, либо услугами 
+                    a(href="#") нашего байера 
+
+                .hero__btn-wrap 
+                  a(href="#").btn.btn--light.consultation-js Получить консультацию 
+                  a(href="#order" data-scroll).btn.order-js Оформить заказ  
+             
+              .hero__col 
+                .hero__img 
+                  img( loading="lazy" src="images/dist/hero6.webp", alt="") 
+
+              .hero__bg-map 
+                img(loading="lazy" src="images/dist/map.webp", alt="")
+
+        .txt-img(data-aos="fade-up")
+          .container
+            .txt-img__wrap 
+              .txt-img__col
+                h2.txt-img__title.title Невозможность самостоятельного заказа
+                p 
+                  b Сейчас самостоятельная покупка качественных и недорогих товаров с iHerb.com осложнена по нескольким причинам. Сайт заблокирован в России, к нему есть доступ только по VPN. А с февраля 2022 года невозможно оплатить заказ российскими картами. Плюс сам американский Айхерб приостановил доставку товаров в Россию.Мы помогаем с оформлением, оплатой и доставкой товаров с iHerb.com. Принимаем заказ, оплачиваем и заполняем документы на доставку курьерскими службами. С нами вы получите товары напрямую из США и дешевле, чем в России!
+              .txt-img__col 
+                .txt-img__img.txt-img__img--bg 
+                  img( loading="lazy" src="images/dist/flat4.webp", alt="")
+        br
+        .gradient-section(data-aos="fade-up" style="background-image: url('images/dist/section-bg1.webp')")
+          .container
+            h2.title.title--light.tac Почему стоит заказать через нас?
+            br
+            br
+            .gradient-section__count-wrap
+              each item in[{"title":"Быстрая доставка","desc":"Товар доставляется напрямую с американского iHerb.com через курьерские службы. Вы получите оригинальный товар без наценок!"},{"title":"В 4 раза дешевле, чем в России","desc":"Через нас можно заказать товары без наценок торговых компаний. Можете проверить сами и сравнить цены с Wildberries и другими магазинами. Мы не торгуем, а помогаем доставить из Америки!"},{"title":"Помогаем с оплатой и оформлением","desc":"Мы можем оплачивать товары на iHerb и поможем с этим вам. Заполним декларации. Проверим ваш заказ по нормативам, сэкономим время и нервы!"},{"title":"Самое большое сообщество по iHerb","desc":"Уже 3 года мы ведем телеграм-канал iHealth Guru, в котором более 31 000 лояльных подписчиков. Рассказываем о новинках, скидках и маст-хэвах. И вы можете нам доверять!"}]
+                .gradient-section__count-item
+                  .gradient-section__count-item-count
+                  div
+                    .gradient-section__count-item-title=item.title
+                    .gradient-section__count-item-desc=item.desc
+
+        .section.txt-img.txt-img--reverse(data-aos="fade-up")
+          .container
+            .txt-img__wrap 
+              .txt-img__col
+                h2.txt-img__title.title Комиссия 10% 
+                p Доставим ваши посылки от 7 дней и от $10, дадим возможность следить за процессом 24/7, проведем через таможню. 
+                p Наш собственный метод экспресс-доставки в пункт выдачи рядом с вами или курьером «до двери». Вы экономите деньги и время за счет того, что этот метод доставки без объединения посылок. Доступно для посылок (отправлений), сформированных только до прихода товаров на склад.
+              .txt-img__col 
+                .txt-img__img 
+                  img( loading="lazy" src="images/dist/commision.webp", alt="")
+        
+        include includes/deliverykg  
+
+        include includes/gradient2 
+        
+        include includes/price 
+        
+        .gradient-section(data-aos="fade-up" style="background-image: url('images/dist/section-bg2.webp')")
+          .container
+            h2.title.title--light Отправляйте нам ссылки на товары с сайта <br> iHerb.Мы закажем товары за Вас
+            .gradient-section__wrap
+              .gradient-section__col
+                ol 
+                  li Переходите на сайт Айхерб, переключайте на Американскую версию и собирайте корзину товаров. Обязательно включите VPN2. 
+                  li Нажимайте на оранжевый треугольник в правом верхнем углу “Поделиться корзиной”
+                  li Отправляйте нам ссылку на корзину в заявку на сайт
+                  li Мы позвоним Вам, рассчитаем стоимость корзины и доставки. Учитываются скидки на товары.
+                br
+                p Комиссия оператора за совершение заказа составит 6% от стоимости заказа, но не менее 295 руб.
+            
+              .gradient-section__col
+                .gradient-section__img.gradient-section__img--bg
+                  img( loading="lazy" src="images/dist/flat1.webp", alt="")  
+
+     
+        include includes/process
+        
+        include includes/faq        
+
+        include includes/order2
+
+        include includes/seo
+        
+
+    include includes/footer
+
+
+  include includes/scripts 

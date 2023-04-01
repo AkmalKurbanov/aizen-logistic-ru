@@ -1,0 +1,11 @@
+.section.process(data-aos="fade-up")
+  .container
+    h2.title.tac Процесс оформления заказа
+    .process__wrap
+      each item,index in process
+        .process__item
+          .process__item-icon
+            svg
+              use(xlink:href='sprite.svg#process'+(index+1))
+          .process__item-title=item.title
+          .process__item-desc=item.desc

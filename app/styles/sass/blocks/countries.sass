@@ -1,0 +1,107 @@
+.countries
+  position: relative
+  
+
+  
+  &__wrap
+    margin-top: rem(60)
+
+    @include xs
+      margin-top: rem(30)
+
+  &__item
+    // max-width: rem(215)
+    border-radius: rem(24)
+    position: relative
+    overflow: hidden
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    max-height: rem(260)
+    min-height: rem(260)    
+    height: 100%
+    margin: auto
+    padding: rem(40) 0
+
+    @include lg
+      border-radius: rem(12) 
+
+    @include xs
+      max-height: rem(200)
+      min-height: rem(200)   
+        
+    
+    &:after
+      position: absolute
+      content: ''
+      width: 100%
+      height: 100%
+      background-color: rgba($black,.35)
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+    
+
+    &-bg
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      object-fit: cover
+      object-position: center
+      
+ 
+
+  &__flag
+    width: rem(72)
+    height: rem(72)
+    border-radius: 100%
+    overflow: hidden
+    @include aic-jcc
+    margin-bottom: rem(25)
+    z-index: 1
+    position: relative
+    margin: auto
+    margin-bottom: rem(15)
+
+    @include xs
+      width: rem(50)
+      height: rem(50)
+
+    img
+      width: 100%
+
+  &__name
+    color: $white
+    font-size: rem(20)
+    font-weight: 600
+    margin-bottom: rem(15)
+    z-index: 1
+    position: relative
+    text-align: center
+    
+    @include xs
+      font-size: rem(16)
+
+
+  &__time
+    color: $white
+    font-size: rem(20)
+    font-weight: 400    
+    z-index: 1
+    position: relative
+    text-align: center
+
+    @include xs
+      font-size: rem(16)
+
+  .slick-slide
+    padding: 0 rem(25)  
+    
+    @include lg
+      padding: 0 rem(15)  
+
+    @include xs
+      padding: 0 rem(5)  

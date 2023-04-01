@@ -1,0 +1,200 @@
+extends layouts/main
+block title
+  | Где купить
+block main
+  include includes/popup
+  .wrapper
+    .content
+        include includes/header
+        
+        .section.search(data-aos="fade-up")
+          .container
+            .search__wrap 
+              .search__col
+                h2.title Где купить
+                p.subtitle Каталог интернет магазинов
+                //- br
+                //- .search__form 
+                //-   form(action="")
+                //-     .search__input
+                //-       input(type="text" placeholder="amazon.com")
+                //-       button(type="submit").search__input-btn.btn Поиск 
+
+              //- .search__col 
+              //-   img( loading="lazy" src="images/dist/shipping.webp", alt="")
+             
+        .shops.shops--search#shopsSearch(data-aos="fade-up")
+          .container
+            .shops__col-wrap
+
+              //- .shops__col.brand-list-js
+                .shops__brand-list
+                  ul 
+                    li.active
+                      a(href="") Все магазины 
+                    each item,index in shopsList 
+                      li
+                        a(href=item.link)=item.name 
+              
+              //- a(href="#shopsSearch").hamburger.hamburger--shops
+              //-   span     
+
+              .shops__col.tab
+                .shops__tabs.shops-js
+                  each item in[{"country1":"ОАЭ","country2":"ue"},{"country1":"Кыргызстан","country2":"kg"},{"country1":"Евросоюз","country2":"es"},{"country1":"США","country2":"us"},{"country1":"Турция","country2":"tr"}]
+                    div.tab-wrap
+                      a(href="#"+item.country2)
+                        img( loading="lazy" src="images/dist/shop-flag-"+item.country2+".webp", alt="") 
+                        span=item.country1
+                .tab_content
+                  .shops__list
+                    .shops__list-item
+                      a(href="").shops__item-wrap
+                        .shops__item.shops__item--soon 
+                          .shops__item-soon Скоро
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                    .shops__list-item
+                      a(href="").shops__item-wrap
+                        .shops__item
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                    .shops__list-item
+                      a(href="#").shops__item-wrap
+                        .shops__item
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                    .shops__list-item
+                      a(href="#").shops__item-wrap
+                        .shops__item
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                    .shops__list-item
+                      a(href="#").shops__item-wrap
+                        .shops__item
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                    .shops__list-item
+                      a(href="#").shops__item-wrap
+                        .shops__item
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                    .shops__list-item
+                      a(href="#").shops__item-wrap
+                        .shops__item
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                    
+                  .shops__list
+                    .shops__list-item
+                      a(href="").shops__item-wrap
+                        .shops__item.shops__item--soon 
+                          .shops__item-soon Скоро
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                    .shops__list-item
+                      a(href="").shops__item-wrap
+                        .shops__item
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                    .shops__list-item
+                      a(href="#").shops__item-wrap
+                        .shops__item
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                    .shops__list-item
+                      a(href="#").shops__item-wrap
+                        .shops__item
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                    .shops__list-item
+                      a(href="#").shops__item-wrap
+                        .shops__item
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                    
+                  .shops__list
+                    .shops__list-item
+                      a(href="").shops__item-wrap
+                        .shops__item.shops__item--soon 
+                          .shops__item-soon Скоро
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                    .shops__list-item
+                      a(href="").shops__item-wrap
+                        .shops__item
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                    .shops__list-item
+                      a(href="#").shops__item-wrap
+                        .shops__item
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                   
+                  .shops__list
+                    .shops__list-item
+                      a(href="").shops__item-wrap
+                        .shops__item.shops__item--soon 
+                          .shops__item-soon Скоро
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                    .shops__list-item
+                      a(href="").shops__item-wrap
+                        .shops__item
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                    .shops__list-item
+                      a(href="#").shops__item-wrap
+                        .shops__item
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                   
+                    .shops__list-item
+                      a(href="").shops__item-wrap
+                        .shops__item.shops__item--soon 
+                          .shops__item-soon Скоро
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                    .shops__list-item
+                      a(href="").shops__item-wrap
+                        .shops__item
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                    .shops__list-item
+                      a(href="#").shops__item-wrap
+                        .shops__item
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                   
+                  .shops__list
+                    .shops__list-item
+                      a(href="").shops__item-wrap
+                        .shops__item.shops__item--soon 
+                          .shops__item-soon Скоро
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                    .shops__list-item
+                      a(href="").shops__item-wrap
+                        .shops__item
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                    .shops__list-item
+                      a(href="#").shops__item-wrap
+                        .shops__item
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                    .shops__list-item
+                      a(href="#").shops__item-wrap
+                        .shops__item
+                          img(src="images/dist/", alt="")
+                        .shops__name.tac Amazon
+                
+        br
+        include includes/order-bot
+
+        include includes/seo
+
+    include includes/footer
+
+
+  include includes/scripts 

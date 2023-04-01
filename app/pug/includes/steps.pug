@@ -1,0 +1,14 @@
+.section.steps(data-aos="fade-up")
+  .container
+    h2.title.tac Как заказать доставку?
+    .steps__wrap
+      each step,index in steps
+        .steps__item
+          .steps__icon-wrap
+            .steps__item-count
+              span Шаг
+            .steps__icon
+              img( loading="lazy" src="images/dist/step"+(index+1)+".webp", alt="")
+              
+          .steps__title!=step.title
+          .steps__desc!=step.desc

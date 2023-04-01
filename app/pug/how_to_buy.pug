@@ -1,0 +1,42 @@
+extends layouts/main
+block title
+  | Как купить
+block main
+  include includes/popup
+  .wrapper
+    .content
+        include includes/header
+        .hero.hero--bg
+          .container
+            .hero__wrap 
+              .hero__col
+                h2.hero__title.title Как купить
+                p Покупайте товары в интернет-магазинах США, Европы, ОАЭ и Турции через наш сервис, а мы перешлем их вам быстро и по выгодной цене!
+                br
+                p Оплачивайте российскими картами и криптовалютой!
+                .hero__pay-systems
+                  img(loading="lazy" src="images/dist/pay-systems1.webp", alt="")
+                .hero__btn-wrap 
+                  a(href="#").btn.btn--light.consultation-js Получить консультацию 
+                  a(href="#order" data-scroll).btn.order-js Оформить заказ  
+             
+              .hero__col 
+                .hero__img 
+                  img( loading="lazy" src="images/dist/hero3.webp", alt="") 
+
+              .hero__bg-map 
+                img(loading="lazy" src="images/dist/map.webp", alt="")
+
+        include includes/steps
+        include includes/gradient
+        include includes/deliverykg
+        include includes/order-bot
+        include includes/seo
+        
+         
+     
+
+    include includes/footer
+
+
+  include includes/scripts 

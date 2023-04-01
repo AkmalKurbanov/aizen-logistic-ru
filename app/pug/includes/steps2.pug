@@ -1,0 +1,13 @@
+.section.steps(data-aos="fade-up")
+  .container
+    h2.title.tac Как всё проходит
+    .steps__wrap
+      each step in steps2
+        .steps__item.tac
+          .steps__icon-wrap
+            .steps__item-count
+              span Шаг
+            .steps__icon
+              img( loading="lazy" src="images/dist/step"+step.count+".webp", alt="")
+              
+          .steps__title!=step.title    

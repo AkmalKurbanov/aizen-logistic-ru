@@ -1,0 +1,13 @@
+.geography(data-aos="fade-up")
+  .geography__bg 
+    img(loading="lazy" src="images/dist/map.webp", alt="")
+  .container
+    h2.title.tac География:
+    .geography-js
+      each item in geography
+        .geography__item
+          img( loading="lazy" src=`images/dist/${item.bg}.webp`, alt="").geography__item-bg
+          .geography__item-flag
+            img( loading="lazy" src=`images/dist/${item.flag}.webp`, alt="")
+          .geography__item-name=item.name
+

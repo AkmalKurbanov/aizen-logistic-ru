@@ -1,0 +1,82 @@
+.search
+  &__wrap
+    @include aife-jfcsb
+  
+  // &__col
+    &:first-child
+      max-width: rem(830)
+      width: 100%
+      margin-right: rem(90)
+      
+      @include lg
+        margin-right: rem(30)
+
+      @include sm
+        max-width: 100%
+        margin: 0
+
+    &:last-child
+      max-width: rem(410)
+      width: 100%
+      height: rem(250)
+      
+      @include lg
+        max-width: rem(300)
+        height: rem(140)
+      
+      @include sm
+        display: none
+
+
+      svg
+        width: 100%
+        height: 100%
+      
+  &__input
+    min-height: rem(65)
+    border-radius: rem(16)
+    border: rem(1) solid $accent
+    overflow: hidden
+    @include aistr
+    
+    @include md
+      border-radius: rem(7)
+      min-height: rem(40)
+
+    @include xs
+      flex-direction: column
+      border: none
+      overflow: visible
+      
+
+    input
+      border: none
+      width: 100%
+      padding: 0 rem(20)
+      font-size: rem(18)
+
+      @include xs
+        border: rem(1) solid $accent
+        min-height: rem(40)
+        border-radius: rem(7)
+
+      &::placeholder
+        font-size: rem(18)
+        color: rgba(69, 90, 100, .3)
+
+    &-btn
+      border-radius: 0
+      max-width: rem(230)
+      width: 100%
+      font-size: rem(22)
+      font-weight: 600
+
+      @include md
+        font-size: rem(16)
+        font-weight: 400
+        width: auto
+
+      @include xs
+        border-radius: rem(7)
+        max-width: 100%  
+        margin-top: rem(20)  

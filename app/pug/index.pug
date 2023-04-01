@@ -1,0 +1,115 @@
+extends layouts/main
+block title
+  | Главная
+block main
+  include includes/popup
+  .wrapper
+    .content
+        include includes/header
+        .hero
+          .container
+            .hero__wrap
+              .hero__col
+                h2.hero__title.title Сэкономьте до 80% на шопинге и доставке из США, Европы, ОАЭ и Турции 
+                p Покупайте товары в интернет-магазинах США, Европы, ОАЭ и Турции через наш сервис, а мы перешлем их вам быстро и по выгодной цене!
+                br
+                p Оплачивайте российскими картами и криптовалютой!
+                .hero__pay-systems
+                  img(loading="lazy" src="images/dist/pay-systems1.webp", alt="")
+                .hero__btn-wrap 
+                  a(href="#").btn.btn--light.consultation-js Получить консультацию 
+                  a(href="#order" data-scroll).btn.order-js Оформить заказ  
+             
+              .hero__col 
+                .hero__img 
+                  img( loading="lazy" src="images/dist/hero1.webp", alt="") 
+
+              .hero__bg-map 
+                img(src="images/dist/map.webp", alt="")
+
+        include includes/steps  
+
+        include includes/countries 
+
+        .gradient-section.gradient-section--products(data-aos="fade-up" style="background-image: url('images/dist/section-bg1.webp')")
+          .container 
+            .gradient-section__wrap 
+              .gradient-section__col
+                h2.title.title--light Покупать вместе с Айзен Логистика - выгодно!
+                .gradient-section__subtitle Стоимость товаров в США на порядок ниже, чем в России.
+                p Закупка товаров в итернет-магазинах производятся в долларах. Актуальный курс уточняйте у менеджера на момент в покупки 
+
+              .gradient-section__col 
+                .gradient-section__item-wrap.products-js
+                  mixin item(img, name, price1,price2) 
+                    .gradient-section__item 
+                      .gradient-section__item-img
+                        img( loading="lazy" src="images/dist/product"+img+".webp", alt="")
+                      .gradient-section__item-name=name
+                      .gradient-section__item-price=price1
+                      .gradient-section__item-price.gradient-section__item-price--modify=price2
+                  +item('1', 'PS5', 'РФ: 100 000 ₽ ','США: 42 000 ₽')
+                  +item('2','Meta Quest 2','РФ: 62 000 ₽','США: 30 000 ₽')
+                  +item('3','Nike Sneaker','РФ: 18 000 ₽','США: 7000 ₽')
+                  +item('4','Dyson','РФ: 67 000 ₽','США: 33 000 ₽')
+                  +item('1', 'PS5', 'РФ: 100 000 ₽ ','США: 42 000 ₽')
+                  +item('2','Meta Quest 2','РФ: 62 000 ₽','США: 30 000 ₽')
+                  +item('3','Nike Sneaker','РФ: 18 000 ₽','США: 7000 ₽')
+                  +item('4','Dyson','РФ: 67 000 ₽','США: 33 000 ₽')
+        
+        .container(data-aos="fade-up")
+          .section.advantages-list
+            mixin adv(icon,title,desc)
+              .advantages-list__item 
+                .advantages-list__icon 
+                  svg
+                    use(xlink:href='sprite.svg#advantage'+icon)
+                  
+                div    
+                  .advantages-list__title=title
+
+                  if desc
+                    .advantages-list__desc=desc
+                  else 
+
+            +adv('1','Страховка товара','0,75%')
+            +adv('2','Полное отслеживание посылки','')
+            +adv('3','Решение для бизнеса','В2В')
+        
+        include includes/gradient   
+        include includes/shops
+        
+        .section.shops(data-aos="fade-up")
+          .container
+            h2.title.tac Прямая доставка через Кыргызстан
+            p.subtitle.tac Сотни магазинов и миллионы товаров, которые не продаются в России.
+              br
+              |Мы собрали для вас лучшие магазины в каждой категории. Выбирайте и наслаждайтесь онлайн шоппингом заграницей!  
+            br
+            br
+            .shops__items-wap.shops__items-wap--single-line
+              
+              each item,index in['Matchesfashion','The Hut','Mytheresa','Yoox','IHerb','Farfetch','Asos','The outnet','Saks Fifth Avenue'] 
+                a(href="#").shops__item-wrap
+                  .shops__item
+                    .shops__item-soon Скоро
+                    img(src="images/dist/kg"+(index+1)+".webp", alt="")
+                
+                  .shops__name.tac=item
+            br
+            .tac
+              a.btn(href="#") Смотреть все
+
+        include includes/help
+
+          
+
+        include includes/order-bot
+        
+        include includes/seo
+        
+
+    include includes/footer
+
+
+  include includes/scripts 

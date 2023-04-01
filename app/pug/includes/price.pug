@@ -1,0 +1,12 @@
+.section.price(data-aos="fade-up")
+  .container 
+    h2.title.tac Стоимость доставки посылок
+    .price__wrap
+      each item in price
+        .price__item
+          .price__item-img 
+            img( loading="lazy" src="images/dist/"+item.img+'.webp', alt="")
+          .price__item-title=item.size_name
+          .price__item-price=item.price
+          .price__item-desc=item.desc
+

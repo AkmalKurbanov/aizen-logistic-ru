@@ -1,0 +1,70 @@
+extends layouts/main
+block title
+  | О нас
+block main
+  include includes/popup
+  .wrapper
+    .content
+        include includes/header
+        .hero.hero--bg 
+          .container
+            .hero__wrap 
+              .hero__col
+                h2.hero__title.title Доставка Товаров из заграницы в Россию под ключ 
+                p Aizen Stock – сервис по доставке из зарубежных интернет-магазинов. После регистрации вам доступны адреса наших складов в 13 странах мира. Отправляйте на них товары из местных интернет-магазинов, а мы получим и объединим ваши посылки, тем самым сократив стоимость доставки.                
+                br
+                .hero__bg-desc 
+                  p Целью нашей компании является предоставление максимально удобного и автоматизированного сервиса логистики для отправки заказов по миру.
+                    | Для этого мы собрали в одном сервисе службы доставки, разработали удобный личный кабинет, создали возможность предварительного расчета стоимости доставки и подготовили услугу Фулфилмент. 
+              
+              .hero__col 
+                .hero__img 
+                  img( loading="lazy" src="images/dist/hero2.webp", alt="") 
+                  
+              .hero__bg-map 
+                img(loading="lazy" src="images/dist/map.webp", alt="")
+
+        .section.why(data-aos="fade-up")
+          .container
+            h2.title.tac Почему мы?
+            .why__wrap
+            
+              each item,index in why
+                .why__item 
+                  .why__icon 
+                    img(loading="lazy" src="images/dist/why"+(index+1)+".webp", alt="") 
+                  .why__title!=item.title 
+                  .why__desc!=item.desc
+
+        include includes/gradient2
+
+        
+        .section.products(data-aos="fade-up") 
+          .container
+            h2.title Товары которые мы перевозим
+            .products__wrap
+              .products__col
+                ul 
+                  each item in['Товары народного потребления (одежда, обувь, текстиль, быт)','Печатное оборудование','Бытовая техника','Производство мебели и деревообработка','Оборудование (для производства продуктов питания)','Материалы и компоненты для производства товаров гражданского назначения']
+                    li.products__item 
+                      span.products__item-count
+                      =item
+              .products__col
+                .products__img
+                  img( loading="lazy" src="images/dist/shipping.webp", alt="")
+
+
+        include includes/countries
+        
+        
+
+        include includes/order-bot
+        
+        include includes/seo
+           
+
+
+    include includes/footer
+
+
+  include includes/scripts 

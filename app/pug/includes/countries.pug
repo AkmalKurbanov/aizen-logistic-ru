@@ -1,0 +1,13 @@
+.section.countries(data-aos="fade-up")
+  .container 
+    .title.tac Доставляем из стран:
+    .countries__wrap
+      .countries-js
+        each country in countries
+          .countries__item(style=`background-image: url('images/dist/${country.img}.webp')`)
+            img( loading="lazy" src=`images/dist/${country.img}.webp`, alt="").countries__item-bg
+            
+            .countries__flag
+              img( loading="lazy" src="images/dist/"+country.flag+".webp", alt="")
+            .countries__name=country.name
+            .countries__time=country.time

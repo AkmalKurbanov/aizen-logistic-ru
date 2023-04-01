@@ -1,0 +1,38 @@
+.order(data-aos="fade-up" style="background-image: url('images/dist/section-bg1.webp')")#order
+  .container
+    .order__wrap.order__wrap--form
+      .order__col
+        form(method="post").form
+          input(type='hidden' name='project_name' value='Netlivery')
+          input(type='hidden' name='admin_email' value='250296a@gmail.com')
+          input(type='hidden' name='form_subject' value='Netlivery')
+
+          .order__form 
+            h2.order__title.title Мы свяжемся с Вами в ближайшее время!
+
+            .form-wrap
+              .form-wrap__input 
+                input(type="text" placeholder="ФИО" name="Имя" required)
+              .form-wrap__input.form-wrap__input--half  
+                input(type="text" placeholder="Телефон" name="Телефон" required)
+              .form-wrap__input.form-wrap__input--half  
+                input(type="text" placeholder="Email" name="Email")
+              .form-wrap__input.form-wrap__input--half 
+                input(type="text" placeholder="Название компании" name="Название_компании" required)
+              .form-wrap__input.form-wrap__input--half 
+                input(type="text" placeholder="Тема" name="Тема" required)
+              .form-wrap__textarea
+                <textarea name="Ccылка" placeholder="Ссылка на корзину или на отдельные товары"></textarea> 
+              
+              .form-wrap__checkbox 
+                input(type="checkbox")#agree
+                label(for="agree") <span>Я принимаю соглашение </span>
+                  a(href="#") договора оферты 
+
+              button(type="submit" disabled).btn Заказать  
+
+              p.agree Нажимая на кнопку ЗАКАЗАТЬ, вы соглашаетесь с 
+                a(href="#") политикой обработки  персональных данных и конфиденциальности
+      .order__col
+        .order__img.order__img--hide 
+          img( loading="lazy" src="images/dist/order3.webp", alt="" style="max-width:500px")

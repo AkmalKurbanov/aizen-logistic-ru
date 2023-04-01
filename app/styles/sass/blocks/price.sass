@@ -1,0 +1,91 @@
+.price
+  &__wrap
+    @include jfcsb
+    margin-top: rem(35)
+    position: relative
+
+    @include md
+      flex-wrap: wrap
+
+    &:after
+      position: absolute
+      content: ''
+      background: radial-gradient(50% 50% at 50% 50%, rgba(87, 64, 160, 0.72) 0%, rgba(87, 64, 160, 0) 100%)
+      width: 100%
+      height: rem(310)
+      z-index: -1
+
+  &__item
+    border-radius: rem(24)
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15)
+    background-color: $white
+    padding: rem(30) rem(20) rem(20) rem(20)
+    width: calc( 25% - 40px )
+
+
+    @include lg
+      width: calc( 25% - 10px )
+      border-radius: rem(12)
+
+    @include md  
+      width: calc( 50% - 10px )
+      margin-bottom: rem(20)
+
+    @include xs 
+      width: calc( 50% - 5px )
+      margin-bottom: rem(20)
+      padding: rem(10)
+
+    &-img
+      text-align: center
+      width: rem(110)
+      height: rem(110)
+      @include aic-jcc
+      margin: auto
+      margin-bottom: rem(15)
+      padding: 0 rem(15)
+
+      img
+        max-width: none
+
+    &-title
+      font-size: rem(22)
+      line-height: rem(22)
+      font-weight: 600
+      color: $black
+      margin-bottom: rem(5)
+
+      @include lg
+        font-size: rem(20)
+        line-height: rem(20)
+
+      @include xs 
+        font-size: rem(16)
+        line-height: rem(16)
+
+    &-price
+      font-size: rem(18)
+      line-height: rem(22)
+      font-weight: 500
+      margin-bottom: rem(5)
+
+      @include lg
+        font-size: rem(16)
+        line-height: rem(20)
+
+      @include xs 
+        font-size: rem(14)
+        line-height: rem(14)  
+
+    &-desc
+      font-size: rem(18)
+      line-height: rem(22)
+      font-weight: 400
+
+      @include lg
+        font-size: rem(16)
+        line-height: rem(20)
+
+      @include xs 
+        font-size: rem(14)
+        line-height: rem(14)    

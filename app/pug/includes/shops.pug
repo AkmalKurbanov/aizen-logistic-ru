@@ -1,0 +1,55 @@
+.section.shops(data-aos="fade-up")
+  .container 
+    h2.title.tac Где покупать товары
+    p.subtitle.tac Сотни магазинов и миллионы товаров, которые не продаются в России.
+      br
+      | Мы собрали для вас лучшие магазины в каждой категории. Выбирайте и наслаждайтесь онлайн шоппингом! 
+
+    .shops__wrap 
+      .shops__col 
+        h3.shops__title.title.tac Популярные магазины США
+        .shops__items-wap
+          each item,index in['Amazon','Walmart','Best Buy','Nordstrom'] 
+            a(href="#").shops__item-wrap
+              .shops__item
+                img(loading="lazy" src="images/dist/usa"+(index+1)+".webp", alt="")
+
+              .shops__name.tac=item
+
+        a.btn(href="where_to_buy.html") Смотреть все
+
+      .shops__col 
+        h3.shops__title.title.tac Популярные магазины Европы
+        .shops__items-wap
+          each item,index in['Zalando','Media Markt','Kaufland','Tchibo']
+            a(href="#").shops__item-wrap 
+              .shops__item
+                img(loading="lazy" src="images/dist/es"+(index+1)+".webp", alt="")
+
+              .shops__name.tac=item
+
+        a.btn(href="where_to_buy.html") Смотреть все
+
+      .shops__col 
+        h3.shops__title.title.tac Популярные магазины ОАЭ
+        .shops__items-wap
+          each item,index in['Noon','Namshi','Level Shoes','Sharaf DG'] 
+            a(href="#").shops__item-wrap
+              .shops__item
+                img(loading="lazy" src="images/dist/ue"+(index+1)+".webp", alt="")
+
+              .shops__name.tac=item
+
+        a.btn(href="where_to_buy.html") Смотреть все
+
+      .shops__col 
+        h3.shops__title.title.tac Популярные магазины Турции
+        .shops__items-wap
+          each item,index in['Trendyol','Hersiburada','Zara','Boyner'] 
+            a(href="#").shops__item-wrap
+              .shops__item
+                img(loading="lazy" src="images/dist/tr"+(index+1)+".webp", alt="")
+  
+              .shops__name.tac=item  
+        a.btn(href="where_to_buy.html") Смотреть все
+        
