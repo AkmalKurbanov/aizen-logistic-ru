@@ -1,0 +1,18 @@
+.section.advantages(data-aos="fade-up")
+  .container 
+    h2.title.tac Наши преимущества
+    br
+    .subtitle.tac 
+      | Наша команда обеспечивает качественное обслуживание и поддержку на каждом этапе процесса доставки, чтобы наши клиенты могли чувствовать себя уверенно и защищенно в процессе получения своих товаров из-за рубежа.
+      | Наш сервис доставки в Россию из-за рубежа NETLIVERY предоставляет множество преимуществ для наших клиентов.
+    br
+    .advantages__wrap 
+      each item,index in advantages
+        .advantages__item 
+          //- div
+          //-   .advantages__item-icon 
+          //-     svg
+          //-       use(xlink:href='sprite.svg#advantages'+(index+1))
+          div
+            .advantages__item-title=item.title
+            .advantages__item-desc=item.desc 

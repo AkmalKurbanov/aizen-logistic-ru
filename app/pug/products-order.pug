@@ -1,4 +1,11 @@
 extends layouts/main
+block vars
+  - var description;
+  - var keywords;
+  - var ogtitle;
+  - var ogtype;
+  - var ogurl;
+  - var ogimg;
 block title
   | Товары которые можно заказать
 block main
@@ -32,7 +39,7 @@ block main
 
 
         include includes/faq
-        include includes/order
+        include includes/order3
         include includes/seo
         
 

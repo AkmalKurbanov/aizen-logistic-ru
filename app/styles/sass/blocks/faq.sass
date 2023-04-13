@@ -19,7 +19,7 @@
     text-align: left
     width: calc( 50% - 35px )
     border-bottom: rem(1) solid #6E627A
-    padding: rem(15) 0
+    padding: rem(10) 0
     position: relative
 
     @include lg
@@ -34,32 +34,34 @@
       height: rem(30)
       position: absolute
       right: 0
-      top: rem(20)
+      top: rem(10)
       pointer-events: none
       transition: $transition 
 
       @include lg
         top: rem(10)
+        width: rem(20)
+        height: rem(20)
 
     &-title
-      font-size: rem(22)
+      font-size: rem(18)
       color: $black
       padding-right: rem(40)
       cursor: pointer
 
       @include lg
-        font-size: rem(18)
-        line-height: rem(19)
+        font-size: rem(16)
+        line-height: rem(17)
         padding-right: rem(35)
 
       @include md
-        font-size: rem(16)
-        line-height: rem(17)
+        font-size: rem(15)
+        line-height: rem(16)
         padding-right: rem(30)
       
       @include sm
-        font-size: rem(15)
-        line-height: rem(16)
+        font-size: rem(14)
+        line-height: rem(15)
         padding-right: rem(20)
 
     &-drop

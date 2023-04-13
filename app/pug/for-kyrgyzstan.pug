@@ -1,4 +1,11 @@
 extends layouts/main
+block vars
+  - var description;
+  - var keywords;
+  - var ogtitle;
+  - var ogtype;
+  - var ogurl;
+  - var ogimg;
 block title
   | Товары из Кыргызстана
 block main
@@ -49,19 +56,7 @@ block main
                   +item('6','Adidas','','Оптом: от 20$')
                   +item('7','Nike Air Force','','Оптом: от 10$')
         
-        .section.advantages(data-aos="fade-up") 
-          .container 
-            h2.title.tac Наши преимущества
-            .advantages__wrap 
-              each item,index in advantages
-                .advantages__item 
-                  div
-                    .advantages__item-icon 
-                      svg
-                        use(xlink:href='sprite.svg#advantages'+(index+1))
-                  div
-                    .advantages__item-title=item.title
-                    .advantages__item-desc=item.desc 
+        include includes/advantages
         
         .gradient-section(data-aos="fade-up" style="background-image: url('images/dist/section-bg3.webp')")
           .container 

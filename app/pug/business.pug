@@ -1,6 +1,13 @@
 extends layouts/main
+block vars
+  - var description = 'Сервис доставки NETLIVERY предоставляет возможность заказать и получить товары с iHerb.com, одного из крупнейших интернет-магазинов здорового питания, диетических добавок и натуральной косметики без переплат и наценок.';
+  - var keywords;
+  - var ogtitle;
+  - var ogtype;
+  - var ogurl;
+  - var ogimg;
 block title
-  | Товары из Европы
+  | Заказ товаров с iHerb – купить товары за границей, доставка товаров из за рубежа | NETLIVERY
 block main
   include includes/popup
   .wrapper
@@ -22,20 +29,22 @@ block main
 
               .hero__bg-map 
                 img(loading="lazy" src="images/dist/map.webp", alt="")
+        .container
+          .subtitle 
+            br
+            p Поиск надежного поставщика за границей – это сложная задача. Однако, благодаря правильной организации и выполнении определенных шагов, наша компания успешно с ней справляется. 
+            br
+            p В первую очередь, при поиске нового поставщика, мы исследуем рынок, изучаем популярность товаров, учитывая сезонность и другие факторы, чтобы определить спрос на определенные товары.
+            br
+            p После этого мы начинаем поиск потенциальных поставщиков. Для этого используем различные ресурсы, в том числе онлайн-базы данных и профессиональные социальные сети, чтобы найти компании, производящие нужные товары.
+            br
+            p Далее происходит сбор информации о поставщиках. На этом этапе мы  изучаем информацию о компаниях, проверяем их репутацию, оцениваем опыт работы на рынке, просматриваем отзывы от других клиентов.
+            br
+            p Следующий этап при поиски нового поставщика – это сравнение цен и условий. Мы проводим сравнение цен и условий сотрудничества с различными поставщиками, чтобы выбрать наиболее выгодного для клиента варианта.
+            br
+            p После проведения всех этапов мы предоставляем нашим клиентам информацию о найденных поставщиках, и согласуем с ними условия сотрудничества
         
-        .section.advantages(data-aos="fade-up")
-          .container 
-            h2.title.tac Наши преимущества
-            .advantages__wrap 
-              each item,index in advantages
-                .advantages__item 
-                  div
-                    .advantages__item-icon 
-                      svg
-                        use(xlink:href='sprite.svg#advantages'+(index+1))
-                  div
-                    .advantages__item-title=item.title
-                    .advantages__item-desc=item.desc 
+        include includes/advantages
         
         .gradient-section(data-aos="fade-up" style="background-image: url('images/dist/section-bg3.webp')")
           .container 
@@ -91,7 +100,21 @@ block main
         
         include includes/order3
 
-        include includes/seo
+        .seo
+          .container 
+            .rotare-elem-wrap
+              .rotare-elem
+                img( loading="lazy" src="images/dist/rotare-elem.webp", alt="")
+            .seo__wrap      
+              .seo__text
+                | Сервис доставки NETLIVERY предоставляет возможность заказать и получить товары с iHerb.com, одного из крупнейших интернет-магазинов здорового питания, диетических добавок и натуральной косметики без переплат и наценок.
+        
+              .seo__open-txt 
+                span Узнать больше
+              .seo__hide-txt 
+                span Скрыть
+
+
         
 
     include includes/footer

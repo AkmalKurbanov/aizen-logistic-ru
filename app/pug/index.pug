@@ -1,4 +1,11 @@
 extends layouts/main
+block vars
+  - var description;
+  - var keywords;
+  - var ogtitle;
+  - var ogtype;
+  - var ogurl;
+  - var ogimg;
 block title
   | Главная
 block main
@@ -59,23 +66,36 @@ block main
         
         .container(data-aos="fade-up")
           .section.advantages-list
-            mixin adv(icon,title,desc)
-              .advantages-list__item 
-                .advantages-list__icon 
-                  svg
-                    use(xlink:href='sprite.svg#advantage'+icon)
-                  
-                div    
-                  .advantages-list__title=title
+            .advantages-list__item
+              .advantages-list__icon
+                svg(width='80' height='80' viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg')
+                  path(d='M40.773 22.4974L54.8827 26.26C55.3204 26.3767 55.625 26.7732 55.625 27.2262V44.0802C55.625 46.0863 54.6224 47.9597 52.9532 49.0725L40.5547 57.3381C40.2188 57.5621 39.7812 57.5621 39.4453 57.3381L27.0468 49.0725C25.3776 47.9597 24.375 46.0863 24.375 44.0802V27.2262C24.375 26.7732 24.6796 26.3767 25.1173 26.26L39.227 22.4974C39.7335 22.3623 40.2665 22.3623 40.773 22.4974Z' stroke='white' stroke-width='3' stroke-linecap='round')
+                  path(d='M34.7917 38.9587L38.7816 42.9486C38.8792 43.0463 39.0375 43.0463 39.1351 42.9486L46.25 35.8337' stroke='white' stroke-width='3' stroke-linecap='round')
 
-                  if desc
-                    .advantages-list__desc=desc
-                  else 
+              div
+                .advantages-list__title Страховка товара
+                .advantages-list__desc 0,75%
+            .advantages-list__item
+              .advantages-list__icon
+                svg(width='80' height='80' viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg')
+                  path(d='M20.2083 23.4083C20.2083 22.2882 20.2083 21.7282 20.4263 21.3003C20.6181 20.924 20.924 20.6181 21.3004 20.4263C21.7282 20.2083 22.2882 20.2083 23.4083 20.2083H56.5917C57.7118 20.2083 58.2718 20.2083 58.6997 20.4263C59.076 20.6181 59.3819 20.924 59.5737 21.3003C59.7917 21.7282 59.7917 22.2882 59.7917 23.4083V56.5917C59.7917 57.7118 59.7917 58.2718 59.5737 58.6996C59.3819 59.076 59.076 59.3819 58.6997 59.5737C58.2718 59.7917 57.7118 59.7917 56.5917 59.7917H23.4083C22.2882 59.7917 21.7282 59.7917 21.3004 59.5737C20.924 59.3819 20.6181 59.076 20.4263 58.6996C20.2083 58.2718 20.2083 57.7118 20.2083 56.5917V23.4083Z' stroke='white' stroke-width='3' stroke-linecap='round')
+                  path(d='M41.0417 46.3113C41.0417 51.215 35.7402 54.5278 34.1781 55.3974C33.9088 55.5474 33.5912 55.5474 33.3219 55.3974C31.7598 54.5278 26.4583 51.215 26.4583 46.3113C26.4583 41.8995 29.9914 38.9583 33.75 38.9583C37.6389 38.9583 41.0417 41.8995 41.0417 46.3113Z' stroke='white' stroke-width='2')
+                  path(d='M53.5417 59.7917L41.0417 28.5417' stroke='white' stroke-width='3')
+                  path(d='M59.7917 24.375L20.2083 32.7083' stroke='white' stroke-width='3')
+                  ellipse(cx='33.75' cy='46.25' rx='2.08333' ry='2.08333' fill='white')
 
-            +adv('1','Страховка товара','0,75%')
-            +adv('2','Полное отслеживание посылки','')
-            +adv('3','Решение для бизнеса','В2В')
-        
+              div
+                .advantages-list__title Полное отслеживание посылки
+            .advantages-list__item
+              .advantages-list__icon
+                svg(width='80' height='80' viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg')
+                  path(d='M42.0833 50.417H33.75V56.2555C33.75 56.4224 33.5577 56.5159 33.4264 56.4128L19.1667 45.2087L33.4264 34.0046C33.5577 33.9014 33.75 33.9949 33.75 34.1618V40.0003H46.25' stroke='white' stroke-width='3')
+                  path(d='M37.9167 29.583H46.25V23.7445C46.25 23.5776 46.4423 23.4841 46.5736 23.5872L60.8333 34.7913L46.5736 45.9954C46.4423 46.0986 46.25 46.0051 46.25 45.8382V39.9997H33.75' stroke='white' stroke-width='3')
+
+              div
+                .advantages-list__title Решение для бизнеса
+                .advantages-list__desc В2В
+
         include includes/gradient   
         include includes/shops
         

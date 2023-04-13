@@ -2,10 +2,157 @@
   .container
     h2.title.tac Процесс оформления заказа
     .process__wrap
-      each item,index in process
-        .process__item
-          .process__item-icon
-            svg
-              use(xlink:href='sprite.svg#process'+(index+1))
-          .process__item-title=item.title
-          .process__item-desc=item.desc
+      .process__item
+        .process__item-icon
+          svg(width='120' height='120' viewBox='0 0 120 120' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M37 78.5C37 76.015 39.015 74 41.5 74H72L78.429 78.5L72 83H41.5C39.015 83 37 80.985 37 78.5Z' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M72 74V83' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M43 74V80' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M57.754 38H87V43' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M49 74V56.959' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M87 57V87H49V83' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M87 45V47' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M87 49V51' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M87 53V55' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M52.601 49.601L48 45V37' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M37 55H35V57H37V55Z' fill='#5740A0')
+            path(d='M33 44H31V46H33V44Z' fill='#5740A0')
+            path(d='M34 50H32V52H34V50Z' fill='#5740A0')
+            path(d='M34 38H32V40H34V38Z' fill='#5740A0')
+            path(d='M37 33H35V35H37V33Z' fill='#5740A0')
+            path(d='M61 34H73' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M75 34H78' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M75 51V51.5C75 52.881 76.119 54 77.5 54H80.5C81.881 54 83 52.881 83 51.5C83 50.119 81.881 49 80.5 49H77.5C76.119 49 75 47.881 75 46.5C75 45.119 76.119 44 77.5 44H80.5C81.881 44 83 45.119 83 46.5V47' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M79 54V57' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M79 44V41' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M60 56H70' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M60 60H70' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M55 66H73' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M76.3994 65.399L79.0004 68L83.6014 63.399' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M48 57C54.6274 57 60 51.6274 60 45C60 38.3726 54.6274 33 48 33C41.3726 33 36 38.3726 36 45C36 51.6274 41.3726 57 48 57Z' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+
+        .process__item-title Заполните заявку на заказ
+        .process__item-desc
+          | Заполните поля в заявке и прикрепите ссылки на товары или корзину. Если нужна помощь с выбором - пишите в чат на сайте.
+      .process__item
+        .process__item-icon
+          svg(width='120' height='120' viewBox='0 0 120 120' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M77 35V71' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M52 36H57.001' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M77 80V86H40V36H49.001' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M66 71H86V72C86 74.761 83.761 77 81 77H49' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M44 47V72C44 74.761 46.239 77 49 77C51.761 77 54 74.761 54 72V71H67.004' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M44 36V45' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M49 33V39' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M57 33V39' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M60 36H65.004' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M65.003 33V39' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M68 36H73' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M73 33V39' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M65.729 47.568C64.229 46.577 62.432 46 60.5 46C55.253 46 51 50.253 51 55.5C51 60.747 55.253 65 60.5 65C65.747 65 70 60.747 70 55.5C70 54.7 69.901 53.923 69.715 53.181' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M83 47H81V49H83V47Z' fill='#5740A0')
+            path(d='M83 51H81V53H83V51Z' fill='#5740A0')
+            path(d='M83 55H81V57H83V55Z' fill='#5740A0')
+            path(d='M56.3906 55.391L59.4996 58.5L69.6246 48.375' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+
+        .process__item-title Подтвердите список товаров 
+        .process__item-desc
+          | Менеджер отправит вам в чат или на почту итоговый инвойс со списком, количеством и ценами.
+      .process__item
+        .process__item-icon
+          svg(width='120' height='120' viewBox='0 0 120 120' fill='none' xmlns='http://www.w3.org/2000/svg')
+            mask#mask0_3_34(style='mask-type:luminance' maskUnits='userSpaceOnUse' x='30' y='30' width='60' height='60')
+              path(d='M90 30H30V90H90V30Z' fill='white')
+            g(mask='url(#mask0_3_34)')
+              path(d='M83.0161 77.0164C86.9806 73.0519 84.8146 64.458 78.1781 57.8215C71.5416 51.185 62.9477 49.0189 58.9832 52.9835C55.0186 56.9481 57.1846 65.5419 63.8211 72.1784C70.4576 78.8149 79.0515 80.981 83.0161 77.0164Z' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M58.9827 52.9829L53.9827 57.9829C50.0187 61.9479 52.1847 70.5419 58.8207 77.1789C65.4567 83.8159 74.0517 85.9819 78.0167 82.0169L83.0167 77.0169' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M35 70V76C35 79.866 41.268 83 49 83C52.335 83 55.397 82.417 57.802 81.444' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M61.4219 55.422L64.3179 58.318' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M77.6816 71.682L80.5936 74.594' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M53.84 76.57C52.331 76.848 50.701 77 49 77C41.268 77 35 73.866 35 70C35 66.134 41.268 63 49 63' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M71.15 71.505C71.974 72.423 73.169 73 74.5 73C76.985 73 79 70.985 79 68.5C79 66.015 76.985 64 74.5 64C73.948 64 73.419 64.099 72.93 64.281L69.07 65.718C68.581 65.901 68.052 66 67.5 66C65.015 66 63 63.985 63 61.5C63 59.015 65.015 57 67.5 57C68.831 57 70.026 57.577 70.85 58.495' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M46.6009 38.785L45.5879 36.206' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M49.3579 45.798L47.5859 41.29' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M40.5942 51.594L33.4062 44.406' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M60 44V34' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M73.3994 38.785L74.4124 36.206' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M70.6426 45.798L72.4146 41.29' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M79.4062 51.594L86.5943 44.406' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+
+        .process__item-title Оплата заказа
+        .process__item-desc
+          | После согласования инвойса, менеджер направит вам ссылку на оплату заказа. Вы можете оплатить российскими картами.
+      .process__item
+        .process__item-icon
+          svg(width='120' height='120' viewBox='0 0 120 120' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M42 74V74.5C42 75.881 43.119 77 44.5 77H47.5C48.881 77 50 75.881 50 74.5C50 73.119 48.881 72 47.5 72H44.5C43.119 72 42 70.881 42 69.5C42 68.119 43.119 67 44.5 67H47.5C48.881 67 50 68.119 50 69.5V70' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M46 64V67' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M46 77V80' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M34.1885 69.879C35.1885 64.263 40.0965 60 46.0005 60C52.6275 60 58.0005 65.373 58.0005 72C58.0005 78.627 52.6275 84 46.0005 84C40.8405 84 36.4405 80.743 34.7455 76.173' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M34.139 73.832C34.047 73.234 34 72.623 34 72' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M75 87H74C72.896 87 72 86.104 72 85V62L74.5 58.708L77 62V85C77 86.104 76.104 87 75 87Z' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M72 82H77' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M71.9997 79.908L56.7677 84.092L55.4707 79.369' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M50.3775 60.825L48.1035 52.547L53.7555 42.61L74.9115 36.801L85.7165 76.141L76.9995 78.535' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M59.291 62.167L68.693 59.584' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M68.6926 63.733L60.3516 66.024' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M65.737 68.693L61.411 69.882' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M53.7555 42.611L55.8955 50.404L48.1035 52.544' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M71 44L64 54L60 52L55.506 58.706' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M66.375 45L71 44L72.166 48.158' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M37 56V35H65V39.522' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M37 58V60' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M81 40H79V42H81V40Z' fill='#5740A0')
+            path(d='M82 44H80V46H82V44Z' fill='#5740A0')
+            path(d='M83 48H81V50H83V48Z' fill='#5740A0')
+            path(d='M84 52H82V54H84V52Z' fill='#5740A0')
+            path(d='M85 56H83V58H85V56Z' fill='#5740A0')
+
+        .process__item-title Заполните данные для таможни
+        .process__item-desc
+          | После внесения вашего заказа в систему CDEK, вам приходит сообщение с запросом паспортных данных. Это единственное, что вы заполняете дополнительно.
+      .process__item
+        .process__item-icon
+          svg(width='120' height='120' viewBox='0 0 120 120' fill='none' xmlns='http://www.w3.org/2000/svg')
+            path(d='M62.6795 38.697C61.1165 36.127 58.8485 34.032 56.1445 32.68' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M45 50C45 51.657 46.791 53 49 53C51.209 53 53 51.657 53 50C53 48.343 51.209 47 49 47C46.791 47 45 45.657 45 44C45 42.343 46.791 41 49 41C51.209 41 53 42.343 53 44' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M49 41V38' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M49 56V53' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M87 62H81C79.895 62 79 62.895 79 64V85C79 86.105 79.895 87 81 87H87' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M84 65H82V67H84V65Z' fill='#5740A0')
+            path(d='M79 66H76.243C75.447 66 74.684 65.684 74.122 65.121L62.243 53.243C61.447 52.447 60.368 52 59.243 52C56.9 52 55 53.9 55 56.243C55 57.368 55.447 58.447 56.243 59.243L61.172 64.172C61.702 64.702 62 65.422 62 66.172C62 67.734 60.734 69 59.172 69H54.721C53.596 69 52.495 68.684 51.541 68.088L46.579 64.987C45.561 64.351 44.806 63.369 44.451 62.222L40.821 50.46C40.369 48.997 39.018 48 37.488 48C35.562 48 34 49.562 34 51.488C34 51.766 34.032 52.043 34.095 52.314L37.555 67.1C37.847 68.349 38.436 69.51 39.271 70.484L47.606 80.208C49.125 81.979 51.344 83 53.679 83H79' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M59.889 52.049C60.602 50.514 61 48.804 61 47C61 40.373 55.627 35 49 35C42.373 35 37 40.373 37 47C37 47.347 37.015 47.69 37.043 48.029' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            path(d='M42.953 57.367C44.728 58.405 46.795 59 49 59C51.243 59 53.342 58.385 55.138 57.314' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+
+        .process__item-title Оплатите доставку
+        .process__item-desc
+          | После согласования инвойса, менеджер направит вам ссылку на оплату заказа. Вы можете оплатить российскими картами.
+      .process__item
+        .process__item-icon
+          svg(width='120' height='120' viewBox='0 0 120 120' fill='none' xmlns='http://www.w3.org/2000/svg')
+            g(clip-path='url(#clip0_3_34)')
+              path(d='M80.8957 62.204L73.9287 65.239' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M66.207 63.104L73.612 65C73.835 65.059 74 65.252 74 65.481V74' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M72.725 60.052C72.797 60.019 72.879 60 72.964 60C73.015 60 73.064 60.007 73.112 60.019L80.611 62.019C80.835 62.078 81 62.271 81 62.5V70.5C81 70.696 80.879 70.865 80.703 70.947L74.275 73.947C74.203 73.981 74.122 74 74.036 74C73.985 74 73.936 73.993 73.888 73.981L66.389 71.981C66.165 71.922 66 71.729 66 71.5V63.5C66 63.311 66.11 63.142 66.278 63.062C67.919 62.279 71.118 60.802 72.725 60.052V60.052Z' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M37.014 61.771C37.005 61.515 37 61.258 37 61C37 49.402 46.402 40 58 40C69.598 40 79 49.402 79 61C79 61.197 78.997 61.393 78.992 61.588' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M72.5503 76.143C68.7753 79.77 63.6483 82 58.0003 82C48.3703 82 40.2533 75.517 37.7773 66.678' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M62.893 68.968C61.941 68.989 60.976 69 60 69C43.984 69 31 66.09 31 62.5C31 60.99 33.296 59.601 37.148 58.498' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M82.368 58.363C86.511 59.487 89 60.928 89 62.5C89 63.813 87.264 65.034 84.278 66.056' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M54.703 72.859C54.201 72.832 53.703 72.801 53.208 72.767' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M58.822 72.993C58.292 72.987 57.765 72.976 57.242 72.962' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M62.7566 72.962C62.2356 72.976 61.7106 72.987 61.1826 72.993' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M68.784 83.71C65.5 85.18 61.849 86 58.003 86' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M72.7787 81.4821C72.2727 81.8261 71.7527 82.1521 71.2217 82.4611' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M77.3555 43.473C77.7475 43.901 78.1245 44.342 78.4855 44.795' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M58 35C64.189 35 69.874 37.121 74.338 40.663' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M49.2404 72.223C47.1964 74.601 45.0904 76.45 44.2764 76.896' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M37.673 55.705C38.5 54.667 40.085 54 41 54C43.583 54 45 55.182 45 58C45 59 45.25 62 47 62C50.413 62 48.375 59 52 59C53.563 59 54 61.938 54 63C54 64.754 53.112 66.779 51.864 68.734' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+              path(d='M70.331 44C64.741 44 64.83 45.904 63 47C60.949 48.228 57 47.271 57 50C57 53.292 61.214 54 64 54C66.23 54 68.123 55.735 69.683 57.339' stroke='#5740A0' stroke-width='3' stroke-miterlimit='10')
+            defs
+              clippath#clip0_3_34
+                rect(width='60' height='60' fill='white' transform='translate(30 30)')
+
+        .process__item-title Получите ваш заказ
+        .process__item-desc
+          | Получите ваш заказ в удобном пункте выдачи или курьером до дверей. Проверьте, все ли хорошо и оставьте отзыв. Вступайте в наш телеграм-канал со скидками!
+

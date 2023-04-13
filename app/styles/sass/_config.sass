@@ -1,11 +1,16 @@
 // USER VARIABLES SECTION
 
-$accent: orange // Accent Color
+$accent: #5740A0 // Accent Color
 $fontsize: 16px // Body Font Size
-$textcolor: #333 // Text Color
+$textcolor: rgba(110, 98, 122, 0.9) // Text Color
 $lineheight: 1.65 // Document Line Height
-$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
-
+$userfont: 'Jost', sans-serif// User Font Family
+$white: #fff
+$black: #000
+$dark: #263238
+$transition: all .3s
+$secondary: #FECC00
+// $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 // Bootstrap compatible gutter variable => $gutter
 // $grid-gutter-width: 30px
 // $gutter: $grid-gutter-width
@@ -16,9 +21,11 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font
 @import 'blocks/mixins/_rem'
 @import 'blocks/mixins/_media'
 @import 'node_modules/normalize.css/normalize'
+@import 'node_modules/slick-carousel/slick/slick'
+@import 'node_modules/aos/dist/aos'
 
-
-// GENERAL CSS SETTINGS
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap')
+@import '../../fonts/icons/css/icon.css'
 
 
 
@@ -37,10 +44,10 @@ input, textarea
 		border-color: green
 
 body
+	font-family: $userfont
 	font-size: $fontsize
 	line-height: $lineheight
 	color: $textcolor
-	min-width: rem(320)
 	position: relative
 	overflow-x: hidden
 

@@ -1,6 +1,15 @@
 extends layouts/main
+block vars
+  - var description = 'Доставка товаров из за рубежа по всей России. После регистрации вам доступны адреса наших складов в 13 странах мира. Покупайте товары в интернет-магазинах США, Европы, ОАЭ и Турции через наш сервис, а мы перешлем их вам быстро и по выгодной цене! Оплата покупок российскими картами и криптовалютой!'
+  - var keywords;
+  - var ogtitle;
+  - var ogtype;
+  - var ogurl;
+  - var ogimg;
+
+
 block title
-  | FAQ
+  | Как доставить товары из зарубежных магазинов в Россию – купить товары за границей, доставка товаров из за рубежа | NETLIVERY
 block main
   include includes/popup
   .wrapper
@@ -11,8 +20,21 @@ block main
 
         include includes/order-bot
 
-        include includes/seo
-        
+        .seo
+          .container 
+            .rotare-elem-wrap
+              .rotare-elem
+                img( loading="lazy" src="images/dist/rotare-elem.webp", alt="")
+            .seo__wrap      
+              .seo__text
+                | Доставка товаров из за рубежа по всей России. После регистрации вам доступны адреса наших складов в 13 странах мира. Покупайте товары в интернет-магазинах США, Европы, ОАЭ и Турции через наш сервис, а мы перешлем их вам быстро и по выгодной цене!
+                | Оплата покупок российскими картами и криптовалютой!
+
+              .seo__open-txt 
+                span Узнать больше
+              .seo__hide-txt 
+                span Скрыть
+                
 
     include includes/footer
 
